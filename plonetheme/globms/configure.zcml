@@ -49,5 +49,11 @@
      template="colophon.pt"
      layer=".interfaces.IGlobMSLayer"
      />
+   <browser:viewlet
+     name="globalms.slideshow"
+     manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+     class=".slideshow.SlideshowViewlet"
+     permission="zope2.View"
+     />
 
 </configure>
