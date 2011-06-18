@@ -35,6 +35,6 @@
 <!--  content -->
     <append css:content="#content" css:theme="#gbmscontent .grid_12"/>
 
-<!-- slide -->
-
+<!--  footer -->
+    <append css:content-children="#footercolumns" css:theme="#footercolumns" />
 </rules>

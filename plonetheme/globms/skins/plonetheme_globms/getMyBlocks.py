@@ -8,6 +8,8 @@
 ##title=Return a list of the content types allowed here filtered by getNotAddableTypes
 #
 
+if zone not in context.blocks:
+    return []
 zoneob = context.blocks.get(zone)
 
 items = zoneob.contentItems()
