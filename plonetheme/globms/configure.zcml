@@ -25,10 +25,28 @@
   <include package="Products.LinguaPlone"/>
    <browser:viewlet
      name="plone.app.i18n.locales.languageselector"
+     for="*"
      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
      class="Products.LinguaPlone.browser.selector.TranslatableLanguageSelector"
      permission="zope2.View"
      template="langselector.pt"
+     layer=".interfaces.IGlobMSLayer"
+     />
+   <browser:viewlet
+     name="plone.footer"
+     for="*"
+     manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+     class="plone.app.layout.viewlets.common.FooterViewlet"
+     permission="zope.Public"
+     template="footer.pt"
+     layer=".interfaces.IGlobMSLayer"
+     />
+   <browser:viewlet
+     name="plone.colophon"
+     for="*"
+     manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+     permission="zope.Public"
+     template="colophon.pt"
      layer=".interfaces.IGlobMSLayer"
      />
 
