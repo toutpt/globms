@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<object name="portal_skins">
+ <object name="plonetheme_globms"
+    meta_type="Filesystem Directory View"
+    directory="plonetheme.globms:skins/plonetheme_globms"/>
+ <skin-path name="*">
+  <layer name="plonetheme_globms"
+     insert-after="custom"/>
+ </skin-path>
+</object>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<object name="portal_javascripts">
+
+ <javascript 
+    id="++resource++plone.app.jquerytools.plugins.js"
+    enabled="True"/>
+ <javascript 
+    id="++theme++plonetheme.globms/jquery.equalheights.js"
+    enabled="True"/>
+
+</object>

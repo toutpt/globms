@@ -1,0 +1,116 @@
+body{
+    background: #fff url('../images/bg.png') repeat-x;
+}
+#header,#gbmscontent,#footer,#footercolumns{
+    background-color:#fff
+}
+#header-title{font-family:arial; font-size:19px; color:#626264;margin-top:75px;}
+
+#langselector{
+	text-align: right;
+}
+#langselector .currentLanguage a{
+	text-decoration:underline;
+}
+
+#globmslinks{width:55px;height:14px;float:right;text-align: right;margin:15px 0;}
+#globmslinks ul li span{width:14px;height:14px;display:inline-block;}
+#globms-linkedin{background-image: url('../images/linkedin.png');}
+#globms-viadeo{background-image: url('../images/viadeo.png');}
+#globms-rss{background-image: url('../images/rss.png');}
+
+#nav-bar-wrapper{background-color:#fff;}
+#nav-bar{
+	background: url(../images/nav_bg.png) repeat-x left bottom;
+    clear: both;
+    border-top: 1px solid #dedede;
+    border-right: 1px solid #dedede;
+    border-bottom: 1px solid #a3a3a3;
+    border-left: 1px solid #dedede;
+    font-family: Arial, sans-serif;
+    font-weight:bold;
+    font-size:13px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+	
+}
+#main-nav li{line-height: 3em;}
+
+ul.navigation li a,ul.navigation li a:visited {
+	padding: .9em 1em;
+	color: #606060;
+	font-weight: bold;
+	border-right: 1px solid #c5c5c5;
+	white-space: nowrap;
+}
+ul.navigation li a:hover {
+	color: #75ad0a;
+}
+ul.navigation li.selected a,
+ul.navigation li.active a {
+	color: #75ad0a;
+}
+
+#slideshowwrapper{background-image:url('../images/bghomeblockright.png');color:#fff;margin-bottom:20px;}
+#rightblock h2{font-size:17px;color:#fff;}
+#rightblock{font-size:13px;}
+
+
+/* zone home page central */
+.blockhomecentral{font-size:13px; color:#3b3b3c;background: url('../images/bghomecentral.png');}
+.blockhomecentral h2{font-size:16px; font-weight: bold;padding:10px 0 10px 10px;}
+.blockhomecentral img{float:left;margin: 0 10px 10px 10px;}
+.blockhomecentral p{margin-left:10px;}
+#blockhomecentral0 h2{background: url('../images/trait0.png') no-repeat;}
+#blockhomecentral1 h2{background: url('../images/trait1.png') no-repeat;}
+#blockhomecentral2 h2{background: url('../images/trait2.png') no-repeat;}
+#blockhomecentral3 h2{background: url('../images/trait3.png') no-repeat;}
+
+
+/* zone home page bas*/
+#blockhomebas-wrapper{margin:30px 0;}
+#blockhomebas{
+    background: url('../images/bghomebas.png') repeat-x;
+    border: 1px solid #e6eaee;
+}
+.blockhomebas{height:inherit;}
+.blockhomebas h2,
+.blockhomebas p{
+    font-size:13px;color:#5b5b5b;}
+.blockhomebas h2{
+    font-weight: bold;
+    margin-top:20px;
+}
+.blockhomebas img{float:left;margin:20px;}
+#blockhomebas0,
+#blockhomebas1{
+    border-right: 1px solid #e6eaee;
+    margin-right: 9px;/* border + margin = 10px */
+}
+
+/*
+http://flowplayer.org/tools/demos/scrollable/index.html
+*/
+.scrollable {
+    position:relative;
+    overflow:hidden;
+    width: 940px;
+    height:110px;
+    padding-left:10px;
+}
+.scrollable .items {
+    width:20000em;
+    position:absolute;
+}
+.items div {
+    float:left;
+}
+
+
+
+
+
+#footertext{background-color:#f4f5f7;padding-top:1em;padding-bottom:1em;}
+#footertext p{font-size: 10px; color:#5b5b5b;text-align:center;margin-bottom: 0.1em}
+#footercolumns a{font-size: 11px;color:#b3b6b9;}
+#footercolumns li{list-style: none;display:block;}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules xmlns="http://namespaces.plone.org/diazo" xmlns:css="http://namespaces.plone.org/diazo/css">
+
+    <theme href="home.html" />
+    <notheme if-path="presentation_view"/>
+    <notheme if-path="source_editor.htm"/>
+    <notheme if-path="ploneimage.htm"/>
+    <notheme if-path="anchor.htm"/>
+    <notheme if-path="table.htm"/>
+    <notheme if-path="attributes.htm"/>
+    <notheme if-path="refbrowser_popup"/>
+    <drop content='/html/head/meta[@name="viewport"]'/>
+    <drop css:theme=".drop"/>
+
+<!--  resources (css&js) -->
+    <replace content='/html/head' theme='/html/head' />
+    <copy attributes="class" css:content="body" css:theme="body" />
+    <copy attributes="id dir" css:content="body" css:theme="body" />
+
+<!-- header -->
+    <append css:content="#portal-logo" css:theme="#logo"/>
+    <replace css:content='#portal-searchbox' css:theme-children='#searchbox' />
+    <drop css:content="#portal-searchbox .searchSection"/>
+    <drop css:theme="#langselector ul"/>
+    <append css:content="#portal-languageselector" css:theme="#langselector" />
+    <drop attributes="id" css:content="#portal-languageselector"/>
+    <prepend css:content="#portal-personaltools-wrapper" css:theme="#globmslinks"/>
+
+<!-- navbar -->
+    <drop css:theme="#main-nav li"/>
+    <append css:content="#portal-globalnav li" css:theme="#main-nav"/>
+
+    <replace css:content="#edit-bar" css:theme="#edit-bar"/>
+
+<!--  content -->
+    <append css:content="#content" css:theme="#gbmscontent .grid_12"/>
+
+<!-- slide -->
+
+</rules>

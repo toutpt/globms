@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<layers>
+    <layer name="GlobMSLayer"
+        interface="plonetheme.globms.interfaces.IGlobMSLayer"
+    />
+</layers>
