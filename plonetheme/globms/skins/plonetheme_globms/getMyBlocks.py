@@ -14,6 +14,5 @@ items = zoneob.contentItems()
 blocks = []
 for id, item in items:
     blocks.append(item)
-context.plone_log('end')
 
 return blocks
