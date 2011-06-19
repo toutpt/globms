@@ -1,3 +1,7 @@
+/*
+  CHANGELOG for globms project
+  - remove #portal-logo margin
+ */
 /* @override
     http://localhost:8080/4/portal_css/Sunburst%20Theme/public.css
     http://localhost:8080/sprites/portal_css/Sunburst%20Theme/public.css
@@ -99,11 +103,6 @@ q {
     z-index: 2;
 }
 
-#portal-logo {
-    display: inline-block;
-    margin-bottom: 0.5em;
-}
-
 #portal-globalnav {
     clear: both;
     font-size: 80%;
@@ -135,6 +134,20 @@ q {
 }
 
 #portal-personaltools {
+    float: right;
+    background: #e3e3e3;
+    position: relative;
+    z-index: 3; /* personaltools should be above #portal-header (with z-index: 2) */
+    top: 0;
+    right: 0;
+    padding: 0.25em 0.5em;
+    font-size: 80%;
+    border-bottom-right-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    -webkit-border-bottom-right-radius: 0.5em;
+    -webkit-border-bottom-left-radius: 0.5em;
+    -moz-border-radius-bottomleft: 0.5em;
+    -moz-border-radius-bottomright: 0.5em;
 }
 #portal-personaltools #anon-personalbar a {
     float: left;
@@ -428,14 +441,49 @@ dl.portlet ul.navTree .navTreeCurrentItem {
 
 /* @group Content Area */
 
+#content {
+    line-height: 1.5em;
+    clear: both;
+    font-size: 80%;
+    margin: 1em 0.25em 2em 0.25em;
+}
+
+/* Special case of #content - TinyMCE */
+body#content {
+    margin: 1em;
+}
+
+#content h1 {
+    margin-top: 0.5em;
+}
+
+#content h1.documentFirstHeading {
+    margin-top: 0;
+}
+
+#content p,
+#content table,
+#content dl,
+dl.portlet p,
+dl.portlet {
+    margin-bottom: 1em;
+}
+
+#content ul,
+#content ol {
+
+}
+
 #content a:link,
 dl.portlet a:link {
     color: #205c90;
+    border-bottom: 0.1em solid #ccc;
 }
 
 #content a:visited,
 dl.portlet a:visited {
     color: #427597;
+    border-bottom: 0.1em solid #ccc;
 }
 #content a:hover,
 dl.portlet a:hover {
