@@ -29,7 +29,7 @@
     <drop css:theme="#langselector ul"/>
     <append css:content="#portal-languageselector" css:theme="#langselector" />
     <drop attributes="id" css:content="#portal-languageselector"/>
-    <prepend css:content="#portal-personaltools-wrapper" css:theme="#globmslinks"/>
+    <before css:content="#portal-personaltools-wrapper" css:theme="#globmslinks"/>
 
 <!-- navbar -->
     <drop css:theme="#main-nav li"/>
