@@ -1,6 +1,9 @@
 /*
   CHANGELOG for globms project
   - remove #portal-logo margin
+  - add every change on font, color but not layout
+  - update margin (l 447)
+  - remove margin left of bread crumbs (l 269)
  */
 /* @override
     http://localhost:8080/4/portal_css/Sunburst%20Theme/public.css
@@ -264,7 +267,6 @@ input.searchField {
 #portal-breadcrumbs {
     font-size: 80%;
     margin-bottom: 1em;
-    margin-left: 0.25em;
 }
 #portal-breadcrumbs a {
     border-bottom: none;
@@ -445,7 +447,7 @@ dl.portlet ul.navTree .navTreeCurrentItem {
     line-height: 1.5em;
     clear: both;
     font-size: 80%;
-    margin: 1em 0.25em 2em 0.25em;
+    margin: 1em 10px 2em 10px;
 }
 
 /* Special case of #content - TinyMCE */
@@ -2100,4 +2102,65 @@ div.overlay .formControls a {
 #noTagsSelected, #oneOrMoreTagsSelected {
     display: none;
 }
+/* @end */
+
+/* @group globms */
+#slideshowwrapper{
+    width:960px;
+    color:#fff;
+    background-color: #35424a;
+}
+#rightblock h2{font-size:17px;color:#fff;}
+#rightblock{font-size:13px;}
+
+#portal-languageselector .currentLanguage a{
+    text-decoration:underline;
+}
+.homecenterb{
+    font-size:13px;
+    color:#3b3b3c;
+}
+.homecenterb h2{
+    font-size:16px;
+    font-weight: bold;
+    padding:10px 0 10px 10px;
+}
+.homecenterb img{
+    float:left;
+    margin: 0 10px 10px 10px;
+}
+.homecenterb p{
+    margin-left:10px;
+}
+.blockhomebas h2,
+.blockhomebas p{
+    font-size:13px;color:#5b5b5b;}
+.blockhomebas h2{
+    font-weight: bold;
+    margin-top:20px;
+}
+.blockhomebas img{float:left;margin:20px;}
+#blockhomebas0,
+#blockhomebas1{
+    border-right: 1px solid #e6eaee;
+    margin-right: 9px;/* border + margin = 10px */
+}
+#footertext{
+    background-color:#f4f5f7;
+    padding-top:1em;
+    padding-bottom:1em;
+}
+#footertext p{
+    font-size: 10px;
+    color:#5b5b5b;
+    text-align:center;
+    margin-bottom: 0.1em
+}
+#footercolumns a,
+#footercolumns{
+    font-size: 11px;
+    color:#b3b6b9;
+    margin-top:30px;margin-bottom:100px;
+}
+
 /* @end */

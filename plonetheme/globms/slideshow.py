@@ -14,7 +14,7 @@ class SlideshowViewlet(common.ViewletBase):
         context = self.context.aq_base
         if context_state.is_portal_root():
             self.context.plone_log('we are on root')
-            if 'blocks' not in portal.objectIds():
+            if 'blocks' not in portal.objectIds() or not context_state.is_default_page():
                 self.context.plone_log('no blocks folder')
                 return u""
             slide = portal.blocks.home_slideshow

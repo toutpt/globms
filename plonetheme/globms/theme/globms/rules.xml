@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rules xmlns="http://namespaces.plone.org/diazo" xmlns:css="http://namespaces.plone.org/diazo/css">
 
-    <theme href="home.html" />
+    <theme href="main.html" />
+    <theme href="home.html" if-path="/ /Plone/"/>
     <notheme if-path="presentation_view"/>
     <notheme if-path="source_editor.htm"/>
     <notheme if-path="ploneimage.htm"/>
@@ -30,11 +31,17 @@
 <!-- navbar -->
     <drop css:theme="#main-nav li"/>
     <append css:content="#portal-globalnav li" css:theme="#main-nav"/>
+    <append css:content-children="#portal-breadcrumbs" css:theme="#portal-breadcrumbs"/>
+    <drop if-path="/Plone/" css:theme="#portal-breadcrumbs"/>
 
 
-<!--  content -->
+<!-- CONTENT -->
     <after css:content="#slideshowwrapper" css:theme="#nav-bar-wrapper" />
     <append css:content="#content" css:theme="#gbmscontent"/>
+    <append css:content="#viewlet-below-content" css:theme="#gbmscontent" />
+    <append css:content-children="#portal-column-one" css:theme="#gbmscleft" />
+    <append css:content-children="#portal-column-two" css:theme="#gbmscright" />
+
 
 <!--  footer -->
     <append css:content-children="#footercolumns" css:theme="#footercolumns" />

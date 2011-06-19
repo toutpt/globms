@@ -1,7 +1,7 @@
 body{
     background: #fff url('../images/bg.png') repeat-x;
 }
-#header,#gbmscontent,#footer,#footercolumns{
+.container_12,#header,#gbmscontent,#footer,#footercolumns,#gbmscolumn,#gbmscontentwrapper{
     background-color:#fff
 }
 #header-title{
@@ -64,30 +64,20 @@ ul.navigation li.active a {
 	color: #75ad0a;
 }
 
-/* SLIDESHOW */
+/* HOME PAGE SLIDESHOW*/
 #slideshowwrapper{
-    width:960px;
     background-image:url('../images/bghomeblockright.png');
-    color:#fff;
-}
-#rightblock h2{font-size:17px;color:#fff;}
-#rightblock{font-size:13px;}
-
-/* CONTENT */
-#gbmscontent{
-    padding-top:20px;
 }
 
 
 /* HOME PAGE CENTER */
-.blockhomecentral{font-size:13px; color:#3b3b3c;background: url('../images/bghomecentral.png');}
-.blockhomecentral h2{font-size:16px; font-weight: bold;padding:10px 0 10px 10px;}
-.blockhomecentral img{float:left;margin: 0 10px 10px 10px;}
-.blockhomecentral p{margin-left:10px;}
-#blockhomecentral0 h2{background: url('../images/trait0.png') no-repeat;}
-#blockhomecentral1 h2{background: url('../images/trait1.png') no-repeat;}
-#blockhomecentral2 h2{background: url('../images/trait2.png') no-repeat;}
-#blockhomecentral3 h2{background: url('../images/trait3.png') no-repeat;}
+.homecenterb{
+    background: url('../images/bghomecentral.png');
+}
+#homecenterb0 h2{background: url('../images/trait0.png') no-repeat;}
+#homecenterb1 h2{background: url('../images/trait1.png') no-repeat;}
+#homecenterb2 h2{background: url('../images/trait2.png') no-repeat;}
+#homecenterb3 h2{background: url('../images/trait3.png') no-repeat;}
 
 
 /* HOME PAGE LAST */
@@ -95,20 +85,6 @@ ul.navigation li.active a {
 #blockhomebas{
     background: url('../images/bghomebas.png') repeat-x;
     border: 1px solid #e6eaee;
-}
-.blockhomebas{height:inherit;}
-.blockhomebas h2,
-.blockhomebas p{
-    font-size:13px;color:#5b5b5b;}
-.blockhomebas h2{
-    font-weight: bold;
-    margin-top:20px;
-}
-.blockhomebas img{float:left;margin:20px;}
-#blockhomebas0,
-#blockhomebas1{
-    border-right: 1px solid #e6eaee;
-    margin-right: 9px;/* border + margin = 10px */
 }
 
 /*
@@ -127,24 +103,4 @@ http://flowplayer.org/tools/demos/scrollable/index.html
 }
 .items div {
     float:left;
-}
-
-
-/* FOOTER */
-#footertext{
-    background-color:#f4f5f7;
-    padding-top:1em;
-    padding-bottom:1em;
-}
-#footertext p{
-    font-size: 10px;
-    color:#5b5b5b;
-    text-align:center;
-    margin-bottom: 0.1em
-}
-#footercolumns a,
-#footercolumns{
-    font-size: 11px;
-    color:#b3b6b9;
-    margin-top:30px;margin-bottom:100px;
 }

@@ -7,35 +7,12 @@
       i18n:domain="collective.googledocsviewer">
 <body>
 <div metal:fill-slot="main" class="container_12">
-<!-- 
- <div id="slideshowwrapper">
-  <div id="slideshow" class="grid_9 alpha">
-    <tal:comment replace="nothing">THIS NEED A /slideshow folder with block inside</tal:comment>
-    <div class="images" tal:repeat="slide python:here.getMyBlocks('home_slideshow')">
-        <div><img tal:define="scales slide/@@images;
-                  slidescale python: scales.scale('image', width=700, height=269);"
-                  tal:condition="slidescale"
-                  tal:attributes="src slidescale/url;
-                                  width slidescale/width;
-                                  height slidescale/height" /></div>
-    </div>
-    <div class="slidetabs">
-      <tal:block tal:repeat="slide python:here.getMyBlocks('home_slideshow')">
-         <a href="#"></a>
-      </tal:block>
-    </div>
-  </div>
-  <div id="rightblock" class="grid_3 omega" tal:define="rightblock python:here.blocks.home_rightblock">
-    <h2 tal:content="rightblock/Title">block title</h2>
-    <p tal:replace="structure rightblock/getText">block content</p>
-  </div>
-
-  <div class="clear"></div>
- </div>
--->
   <div class="clear"></div>
   <tal:block repeat="block python:here.getMyBlocks('home_center')">
-    <div class="grid_3 blockhomecentral" tal:attributes="id string:blockhomecentral${repeat/block/index}">
+  <tal:def define="extra_class string:grid_3 homecenterb; index repeat/block/index;
+                   extra_class python:repeat['block'].start and extra_class + ' alpha' or extra_class;
+                   extra_class python:repeat['block'].end and extra_class + ' omega' or extra_class;">
+    <div tal:attributes="class extra_class;id string:homecenterb${repeat/block/index}">
         <h2 tal:content="block/Title">block title</h2>
         <img tal:define="scales block/@@images;
                   thumb python: scales.scale('image', width=50, height=50);"
@@ -45,12 +22,13 @@
                                   height thumb/height" />
         <p tal:replace="structure block/getText"></p>
     </div>
+  </tal:def>
   </tal:block>
 
 
   <div class="clear"></div>
-<div class="container_12" id="blockhomebas-wrapper">
-  <div id="blockhomebas" class="grid_12">
+<div id="blockhomebas-wrapper">
+  <div id="blockhomebas" class="grid_12 alpha omega">
   <tal:block repeat="block python:here.blocks.getMyBlocks('home_last')">
   <tal:def define="extra_class string:grid_4 blockhomebas; index repeat/block/index;
                    extra_class python:repeat['block'].start and extra_class + ' alpha' or extra_class;
@@ -96,9 +74,6 @@ $(".slidetabs").tabs(".images > div", {effect: 'fade',fadeOutSpeed: "fast",rotat
 $(".scrollable").scrollable({circular:true}).autoscroll({interval:3000});
 $(".blockhomebas").equalHeights();
 </script>
-
-
-
 
 
 </div>
