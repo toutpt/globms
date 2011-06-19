@@ -13,9 +13,9 @@ class SlideshowViewlet(common.ViewletBase):
         portal = portal_state.portal()
         context = self.context.aq_base
         if context_state.is_portal_root():
-            self.context.plone_log('we are on root')
+#            self.context.plone_log('we are on root')
             if 'blocks' not in portal.objectIds():
-                self.context.plone_log('no blocks folder')
+#                self.context.plone_log('no blocks folder')
                 return u""
             if not context_state.is_view_template():
                 return u""
@@ -25,7 +25,7 @@ class SlideshowViewlet(common.ViewletBase):
             if context_state.is_default_page:
                 context = context_state.parent()
             if 'globalms_slideshow' not in context.objectIds():
-                self.context.plone_log('no globalms_slideshow item')
+#                self.context.plone_log('no globalms_slideshow item')
                 return u""
             slide = context.globalms_slideshow
         
