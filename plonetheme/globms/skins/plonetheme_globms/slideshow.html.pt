@@ -1,4 +1,4 @@
- <div id="slideshowwrapper">
+ <div id="slideshowwrapper" class="container_12">
   <div id="slideshow" class="grid_9 alpha">
     <tal:comment replace="nothing">THIS NEED A /slideshow folder with block inside</tal:comment>
     <div class="images" tal:repeat="slide python:here.getMyBlocks('home_slideshow')">

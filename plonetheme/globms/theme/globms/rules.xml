@@ -18,6 +18,7 @@
     <copy attributes="id dir" css:content="body" css:theme="body" />
 
 <!-- header -->
+    <replace css:content="#edit-bar" css:theme="#edit-bar"/>
     <append css:content="#portal-logo" css:theme="#logo"/>
     <replace css:content='#portal-searchbox' css:theme-children='#searchbox' />
     <drop css:content="#portal-searchbox .searchSection"/>
@@ -30,10 +31,10 @@
     <drop css:theme="#main-nav li"/>
     <append css:content="#portal-globalnav li" css:theme="#main-nav"/>
 
-    <replace css:content="#edit-bar" css:theme="#edit-bar"/>
 
 <!--  content -->
-    <append css:content="#content" css:theme="#gbmscontent .grid_12"/>
+    <after css:content="#slideshowwrapper" css:theme="#nav-bar-wrapper" />
+    <append css:content="#content" css:theme="#gbmscontent"/>
 
 <!--  footer -->
     <append css:content-children="#footercolumns" css:theme="#footercolumns" />

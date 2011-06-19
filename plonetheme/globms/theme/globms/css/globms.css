@@ -4,21 +4,35 @@ body{
 #header,#gbmscontent,#footer,#footercolumns{
     background-color:#fff
 }
-#header-title{font-family:arial; font-size:19px; color:#626264;margin-top:75px;}
+#header-title{
+    font-size:19px;
+    color:#626264;
+    margin-top:75px;
+}
 
 #langselector{
-	text-align: right;
+    text-align: right;
 }
 #langselector .currentLanguage a{
 	text-decoration:underline;
 }
 
-#globmslinks{width:55px;height:14px;float:right;text-align: right;margin:15px 0;}
-#globmslinks ul li span{width:14px;height:14px;display:inline-block;}
+#globmslinks{
+    width:55px;height:14px;
+    float:right;
+    text-align: right;
+    margin:15px 0;
+}
+#globmslinks ul li span{
+    width:14px;height:14px;
+    display:inline-block;
+}
 #globms-linkedin{background-image: url('../images/linkedin.png');}
 #globms-viadeo{background-image: url('../images/viadeo.png');}
 #globms-rss{background-image: url('../images/rss.png');}
 
+
+/* MAIN NAVIGATION */
 #nav-bar-wrapper{background-color:#fff;}
 #nav-bar{
 	background: url(../images/nav_bg.png) repeat-x left bottom;
@@ -32,7 +46,6 @@ body{
     font-size:13px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-	
 }
 #main-nav li{line-height: 3em;}
 
@@ -51,12 +64,22 @@ ul.navigation li.active a {
 	color: #75ad0a;
 }
 
-#slideshowwrapper{background-image:url('../images/bghomeblockright.png');color:#fff;margin-bottom:20px;}
+/* SLIDESHOW */
+#slideshowwrapper{
+    width:960px;
+    background-image:url('../images/bghomeblockright.png');
+    color:#fff;
+}
 #rightblock h2{font-size:17px;color:#fff;}
 #rightblock{font-size:13px;}
 
+/* CONTENT */
+#gbmscontent{
+    padding-top:20px;
+}
 
-/* zone home page central */
+
+/* HOME PAGE CENTER */
 .blockhomecentral{font-size:13px; color:#3b3b3c;background: url('../images/bghomecentral.png');}
 .blockhomecentral h2{font-size:16px; font-weight: bold;padding:10px 0 10px 10px;}
 .blockhomecentral img{float:left;margin: 0 10px 10px 10px;}
@@ -67,7 +90,7 @@ ul.navigation li.active a {
 #blockhomecentral3 h2{background: url('../images/trait3.png') no-repeat;}
 
 
-/* zone home page bas*/
+/* HOME PAGE LAST */
 #blockhomebas-wrapper{margin:30px 0;}
 #blockhomebas{
     background: url('../images/bghomebas.png') repeat-x;
@@ -107,10 +130,21 @@ http://flowplayer.org/tools/demos/scrollable/index.html
 }
 
 
-
-
-
-#footertext{background-color:#f4f5f7;padding-top:1em;padding-bottom:1em;}
-#footertext p{font-size: 10px; color:#5b5b5b;text-align:center;margin-bottom: 0.1em}
-#footercolumns a{font-size: 11px;color:#b3b6b9;}
-#footercolumns li{list-style: none;display:block;}
+/* FOOTER */
+#footertext{
+    background-color:#f4f5f7;
+    padding-top:1em;
+    padding-bottom:1em;
+}
+#footertext p{
+    font-size: 10px;
+    color:#5b5b5b;
+    text-align:center;
+    margin-bottom: 0.1em
+}
+#footercolumns a,
+#footercolumns{
+    font-size: 11px;
+    color:#b3b6b9;
+    margin-top:30px;margin-bottom:100px;
+}
