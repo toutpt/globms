@@ -2,6 +2,7 @@
 <rules xmlns="http://namespaces.plone.org/diazo" xmlns:css="http://namespaces.plone.org/diazo/css">
 
     <theme href="one-column.html" />
+    <theme href="three-column.html" css:if-content="body.template-manage-portlets"/>
     <theme href="three-column.html" if="$have_both_portlets"/>
     <theme href="two-column-left.html" if="$have_left_portlets"/>
     <theme href="two-column-right.html" if="$have_right_portlets"/>

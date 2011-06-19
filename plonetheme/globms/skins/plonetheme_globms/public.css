@@ -37,29 +37,30 @@ iframe { border-width: 0; border-style:none; }
 /* @group Basics */
 
 body {
-    font: 100% Arial;
+    font-family: Arial;
+    font-size: 13px;
     background: White;
-    color: Black;
+    color: #3b3b3c;
     /* width: 58em; margin: 1em auto; */
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Helvetica Neue", Arial, FreeSans, sans-serif;
     font-weight: bold;
-    color: Black;
     line-height: 1.5em;
 }
 h1, h2 {
     letter-spacing: -0.05em;
 }
 h1 {
-    font-size: 2em;
+    font-size: 24px;
+    color: #3b3b3c;
 }
 h2 {
-    font-size: 1.75em;
+    font-size: 17px;
 }
 h3 {
-    font-size: 1.25em;
+    font-size: 15px;
 }
 h4 {
     font-size: 1.25em;
@@ -71,7 +72,7 @@ h6 {
     font-size: 0.8em;
 }
 h2, h3, h4, h5, h6 {
-    color: #444;
+    color: #3b3b3c;
 }
 h2 a, h3 a, h4 a {
     border-bottom: none !important;
@@ -94,7 +95,7 @@ input {
 }
 
 q {
-    quotes: "â€œ" "â€" "â€˜" "â€™";
+    quotes: "“" "”" "‘" "’";
 }
 
 /* @end */
@@ -265,7 +266,8 @@ input.searchField {
 /* @group Path indicator (breadcrumbs) */
 
 #portal-breadcrumbs {
-    font-size: 80%;
+    font-size: 11px;
+    color: #5b5b5b;
     margin-bottom: 1em;
 }
 #portal-breadcrumbs a {
@@ -952,7 +954,7 @@ dl.error dd {
     font-weight: normal;
 }
 #portal-personaltools dt.actionMenuHeader a:after {
-    content: " â–¼";
+    content: " ▼";
 }
 #portal-personaltools dd {
     right: 0;
