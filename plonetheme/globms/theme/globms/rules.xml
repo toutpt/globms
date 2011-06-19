@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rules xmlns="http://namespaces.plone.org/diazo" xmlns:css="http://namespaces.plone.org/diazo/css">
 
-    <theme href="main.html" />
-    <theme href="home.html" if-path="/ /Plone/"/>
+    <theme href="one-column.html" />
+    <theme href="three-column.html" if="$have_both_portlets"/>
+    <theme href="two-column-left.html" if="$have_left_portlets"/>
+    <theme href="two-column-right.html" if="$have_right_portlets"/>
     <notheme if-path="presentation_view"/>
     <notheme if-path="source_editor.htm"/>
     <notheme if-path="ploneimage.htm"/>
@@ -36,7 +38,7 @@
 
 
 <!-- CONTENT -->
-    <after css:content="#slideshowwrapper" css:theme="#nav-bar-wrapper" />
+    <append css:content-children="#slideshowwrapper" css:theme="#slideshow-wrapper" />
     <append css:content="#content" css:theme="#gbmscontent"/>
     <append css:content="#viewlet-below-content" css:theme="#gbmscontent" />
     <append css:content-children="#portal-column-one" css:theme="#gbmscleft" />

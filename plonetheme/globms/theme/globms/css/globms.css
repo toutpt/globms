@@ -4,6 +4,7 @@ body{
 .container_12,#header,#gbmscontent,#footer,#footercolumns,#gbmscolumn,#gbmscontentwrapper{
     background-color:#fff
 }
+#content .container_12 {width:940px;}
 #header-title{
     font-size:19px;
     color:#626264;
@@ -65,14 +66,14 @@ ul.navigation li.active a {
 }
 
 /* HOME PAGE SLIDESHOW*/
-#slideshowwrapper{
+#slideshow-wrapper{
     background-image:url('../images/bghomeblockright.png');
 }
 
 
 /* HOME PAGE CENTER */
 .homecenterb{
-    background: url('../images/bghomecentral.png');
+    background: #fff url('../images/bghomecentral.png') repeat-x;
 }
 #homecenterb0 h2{background: url('../images/trait0.png') no-repeat;}
 #homecenterb1 h2{background: url('../images/trait1.png') no-repeat;}
@@ -81,7 +82,11 @@ ul.navigation li.active a {
 
 
 /* HOME PAGE LAST */
-#blockhomebas-wrapper{margin:30px 0;}
+#blockhomebas-wrapper{
+    margin-top:30px;
+    margin-bottom: 30px;
+    width:940px;
+}
 #blockhomebas{
     background: url('../images/bghomebas.png') repeat-x;
     border: 1px solid #e6eaee;
@@ -95,7 +100,6 @@ http://flowplayer.org/tools/demos/scrollable/index.html
     overflow:hidden;
     width: 940px;
     height:110px;
-    padding-left:10px;
 }
 .scrollable .items {
     width:20000em;
