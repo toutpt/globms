@@ -1,7 +1,7 @@
 body{
     background: #fff url('../images/bg.png') repeat-x;
 }
-.container_12,#header,#gbmscontent,#footer,#footercolumns,#gbmscolumn,#gbmscontentwrapper{
+.container_12,.popup,#header,#gbmscontent,#footer,#footercolumns,#gbmscolumn,#gbmscontentwrapper{
     background-color:#fff
 }
 #content .container_12 {width:940px;}
