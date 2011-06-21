@@ -2114,6 +2114,18 @@ div.overlay .formControls a {
 /* @end */
 
 /* @group globms */
+#langselector{
+    font-size: 11px;
+    width:300px;
+}
+#langselector img{
+    padding-right:5px;
+}
+#langselector li{
+    width:80px;
+    display:inline-block;
+}
+
 #slideshowwrapper{
     width:960px;
     color:#fff;
