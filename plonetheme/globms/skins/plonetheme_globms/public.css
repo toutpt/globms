@@ -269,7 +269,7 @@ input.searchField {
 #portal-breadcrumbs {
     font-size: 11px;
     color: #5b5b5b;
-    margin: 1em 0 1em 10px;
+    margin-bottom: 1em;
 }
 #portal-breadcrumbs a {
     border-bottom: none;
@@ -362,7 +362,7 @@ div.portletAssignments .managedPortletActions a {
 dl.portlet dt a:link,
 dl.portlet dt a:visited,
 dl.portlet dt a:hover {
-    color: black;
+    color: #fff;
     display: block;
     border: none;
 }
