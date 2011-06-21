@@ -19,7 +19,7 @@
 
 <!--  resources (css&js) -->
     <replace content='/html/head' theme='/html/head' />
-    <copy attributes="class" css:content="body" css:theme="body" />
+    <merge attributes="class" css:content="body" css:theme="body" />
     <copy attributes="id dir" css:content="body" css:theme="body" />
 
 <!-- header -->
