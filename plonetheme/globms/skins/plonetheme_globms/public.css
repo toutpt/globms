@@ -137,22 +137,23 @@ q {
     background: #ddd;
     color: #205c90;
 }
-
 #portal-personaltools {
     float: right;
-
     position: relative;
     z-index: 3; /* personaltools should be above #portal-header (with z-index: 2) */
     top: 0;
     right: 0;
     padding: 15px;
-    font-size: 80%;
     border-bottom-right-radius: 0.5em;
     border-bottom-left-radius: 0.5em;
     -webkit-border-bottom-right-radius: 0.5em;
     -webkit-border-bottom-left-radius: 0.5em;
     -moz-border-radius-bottomleft: 0.5em;
     -moz-border-radius-bottomright: 0.5em;
+}
+#portal-personaltools a{
+    font-size: 15px;
+    color: #6c9a00;
 }
 #portal-personaltools #anon-personalbar a {
     float: left;
@@ -2146,17 +2147,20 @@ div.overlay .formControls a {
     font-weight: bold;
     padding:10px 0 10px 10px;
 }
+.homecenterb p{
+    margin-left:10px;
+    margin-right:10px;
+}
 .homecenterb img{
     float:left;
     margin: 0 10px 10px 10px;
 }
-.homecenterb p{
-    margin-left:10px;
+.blockhomebas{
+    font-size:11px;
+    color:#5b5b5b;
 }
-.blockhomebas h2,
-.blockhomebas p{
-    font-size:13px;color:#5b5b5b;}
 .blockhomebas h2{
+    font-size:13px;
     font-weight: bold;
     margin-top:20px;
 }
