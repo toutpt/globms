@@ -137,22 +137,23 @@ q {
     background: #ddd;
     color: #205c90;
 }
-
 #portal-personaltools {
     float: right;
-
     position: relative;
     z-index: 3; /* personaltools should be above #portal-header (with z-index: 2) */
     top: 0;
     right: 0;
     padding: 15px;
-    font-size: 80%;
     border-bottom-right-radius: 0.5em;
     border-bottom-left-radius: 0.5em;
     -webkit-border-bottom-right-radius: 0.5em;
     -webkit-border-bottom-left-radius: 0.5em;
     -moz-border-radius-bottomleft: 0.5em;
     -moz-border-radius-bottomright: 0.5em;
+}
+#portal-personaltools a{
+    font-size: 15px;
+    color: #6c9a00;
 }
 #portal-personaltools #anon-personalbar a {
     float: left;
@@ -269,7 +270,6 @@ input.searchField {
 #portal-breadcrumbs {
     font-size: 11px;
     color: #5b5b5b;
-    margin-top:1em;
     margin-bottom: 1em;
 }
 #portal-breadcrumbs a {
@@ -333,7 +333,10 @@ dl.portlet {
 dl.portletError {
     background-color: #FFA500;
 }
-
+dl.portlet dt a,
+div.portletAssignments div.portletHeader a{
+    color:#fff;
+}
 dl.portlet dt,
 div.portletAssignments div.portletHeader {
     padding: 0.42em 1em;
@@ -360,7 +363,7 @@ div.portletAssignments .managedPortletActions a {
 dl.portlet dt a:link,
 dl.portlet dt a:visited,
 dl.portlet dt a:hover {
-    color: black;
+    color: #fff;
     display: block;
     border: none;
 }
@@ -455,8 +458,6 @@ dl.portlet ul.navTree .navTreeCurrentItem {
     line-height: 1.5em;
     clear: both;
     font-size: 80%;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 /* Special case of #content - TinyMCE */
@@ -2114,6 +2115,18 @@ div.overlay .formControls a {
 /* @end */
 
 /* @group globms */
+#langselector{
+    font-size: 11px;
+    width:300px;
+}
+#langselector img{
+    padding-right:5px;
+}
+#langselector li{
+    width:80px;
+    display:inline-block;
+}
+
 #slideshowwrapper{
     width:960px;
     color:#fff;
@@ -2134,17 +2147,20 @@ div.overlay .formControls a {
     font-weight: bold;
     padding:10px 0 10px 10px;
 }
+.homecenterb p{
+    margin-left:10px;
+    margin-right:10px;
+}
 .homecenterb img{
     float:left;
     margin: 0 10px 10px 10px;
 }
-.homecenterb p{
-    margin-left:10px;
+.blockhomebas{
+    font-size:11px;
+    color:#5b5b5b;
 }
-.blockhomebas h2,
-.blockhomebas p{
-    font-size:13px;color:#5b5b5b;}
 .blockhomebas h2{
+    font-size:13px;
     font-weight: bold;
     margin-top:20px;
 }

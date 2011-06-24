@@ -9,20 +9,23 @@
     <notheme if-path="presentation_view"/>
     <notheme if-path="source_editor.htm"/>
     <notheme if-path="ploneimage.htm"/>
+    <notheme if-path="plonelink.htm"/>
+    <notheme if-path="anchor.htm"/>
     <notheme if-path="anchor.htm"/>
     <notheme if-path="table.htm"/>
     <notheme if-path="attributes.htm"/>
     <notheme if-path="refbrowser_popup"/>
+    <notheme if-path="translationbrowser_popup"/>
     <drop content='/html/head/meta[@name="viewport"]'/>
     <drop css:theme=".drop"/>
 
 <!--  resources (css&js) -->
     <replace content='/html/head' theme='/html/head' />
-    <copy attributes="class" css:content="body" css:theme="body" />
+    <merge attributes="class" css:content="body" css:theme="body" />
     <copy attributes="id dir" css:content="body" css:theme="body" />
 
 <!-- header -->
-    <replace css:content="#edit-bar" css:theme="#edit-bar"/>
+<!--     <replace css:content="#edit-bar" css:theme="#edit-bar"/> -->
     <append css:content="#portal-logo" css:theme="#logo"/>
     <replace css:content='#portal-searchbox' css:theme-children='#searchbox' />
     <drop css:content="#portal-searchbox .searchSection"/>
@@ -34,14 +37,14 @@
 <!-- navbar -->
     <drop css:theme="#main-nav li"/>
     <append css:content="#portal-globalnav li" css:theme="#main-nav"/>
-    <append css:content-children="#portal-breadcrumbs" css:theme="#portal-breadcrumbs"/>
+<!--     <append css:content-children="#portal-breadcrumbs" css:theme="#portal-breadcrumbs"/> -->
     <drop if-path="/Plone/" css:theme="#portal-breadcrumbs"/>
 
 
 <!-- CONTENT -->
     <append css:content-children="#slideshowwrapper" css:theme="#slideshow-wrapper" />
-    <append css:content="#content" css:theme="#gbmscontent"/>
-    <append css:content="#viewlet-below-content" css:theme="#gbmscontent" />
+    <append css:content-children="#portal-column-content" css:theme="#portal-column-content"/>
+<!--     <append css:content="#viewlet-below-content" css:theme="#gbmscontent" /> -->
     <append css:content-children="#portal-column-one" css:theme="#gbmscleft" />
     <append css:content-children="#portal-column-two" css:theme="#gbmscright" />
 
