@@ -110,7 +110,6 @@ q {
 
 #portal-globalnav {
     clear: both;
-    font-size: 80%;
     background: #ddd;
     /* ensure top navigation dont touches portlets, content etc.. #10491 */
     margin: 0 0 1em 0;
@@ -168,7 +167,6 @@ q {
     right: 1px;
     z-index: 3; /* portal-header has 2 and we need to be above to be clickable */
     padding: 0.25em 0.5em;
-    font-size: 80%;
     border-bottom-right-radius: 0.5em;
     border-bottom-left-radius: 0.5em;
     -webkit-border-bottom-right-radius: 0.5em;
@@ -183,7 +181,7 @@ q {
     text-align: left;
     clear: right;
     margin: 1.2em 0;
-    font-size: 80%;
+    position:relative;
 }
 
 #portal-searchbox form {
@@ -232,7 +230,6 @@ input.searchField {
     position: absolute;
     right: 0;
     background: White;
-    margin: -1.5em 0 0 -7em;
 }
 
 #LSResult fieldset {
@@ -457,7 +454,6 @@ dl.portlet ul.navTree .navTreeCurrentItem {
 #content {
     line-height: 1.5em;
     clear: both;
-    font-size: 80%;
 }
 
 /* Special case of #content - TinyMCE */

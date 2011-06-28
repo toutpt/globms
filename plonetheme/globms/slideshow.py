@@ -24,9 +24,7 @@ class SlideshowViewlet(common.ViewletBase):
             self.context.plone_log('we are not on root')
             if context_state.is_default_page:
                 context = context_state.parent()
-            if 'globalms_slideshow' not in context.objectIds():
-#                self.context.plone_log('no globalms_slideshow item')
+            slide = getattr(context,'bandeau.png', None)
+            if slide is None:
                 return u""
-            slide = context.globalms_slideshow
-        
-        return slide.restrictedTraverse('slideshow.html')()
+        return context.restrictedTraverse('slideshow.html')()

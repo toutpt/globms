@@ -9,6 +9,7 @@
     <notheme if-path="presentation_view"/>
     <notheme if-path="source_editor.htm"/>
     <notheme if-path="ploneimage.htm"/>
+    <notheme if-path="plonelink.htm"/>
     <notheme if-path="anchor.htm"/>
     <notheme if-path="table.htm"/>
     <notheme if-path="attributes.htm"/>
