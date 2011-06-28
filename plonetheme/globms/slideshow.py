@@ -27,4 +27,4 @@ class SlideshowViewlet(common.ViewletBase):
             slide = getattr(context,'bandeau.png', None)
             if slide is None:
                 return u""
-        return context.restrictedTraverse('slideshow.html')()
+        return slide.restrictedTraverse('slideshow.html')()

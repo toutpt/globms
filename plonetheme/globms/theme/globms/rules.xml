@@ -11,6 +11,7 @@
     <notheme if-path="ploneimage.htm"/>
     <notheme if-path="plonelink.htm"/>
     <notheme if-path="anchor.htm"/>
+    <notheme if-path="anchor.htm"/>
     <notheme if-path="table.htm"/>
     <notheme if-path="attributes.htm"/>
     <notheme if-path="refbrowser_popup"/>
