@@ -27,7 +27,8 @@ setup(name='plonetheme.globms',
           'setuptools',
           'plone.app.theming',
           'Products.LinguaPlone',
-          # -*- Extra requirements: -*-
+          'webcouturier.dropdownmenu',
+           # -*- Extra requirements: -*-
       ],
       entry_points="""
       # -*- Entry points: -*-

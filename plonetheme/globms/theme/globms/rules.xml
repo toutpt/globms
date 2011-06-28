@@ -35,8 +35,8 @@
     <before css:content="#portal-personaltools-wrapper" css:theme="#globmslinks"/>
 
 <!-- navbar -->
-    <drop css:theme="#main-nav li"/>
-    <append css:content="#portal-globalnav li" css:theme="#main-nav"/>
+    <drop css:theme="#portal-globalnav li"/>
+    <append css:content-children="#portal-globalnav" css:theme="#portal-globalnav"/>
 <!--     <append css:content-children="#portal-breadcrumbs" css:theme="#portal-breadcrumbs"/> -->
     <drop if-path="/Plone/" css:theme="#portal-breadcrumbs"/>
 

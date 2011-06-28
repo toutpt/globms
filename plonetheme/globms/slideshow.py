@@ -21,7 +21,7 @@ class SlideshowViewlet(common.ViewletBase):
                 return u""
             slide = portal.blocks.home_slideshow
         else:
-            self.context.plone_log('we are not on root')
+#            self.context.plone_log('we are not on root')
             if context_state.is_default_page:
                 context = context_state.parent()
             slide = getattr(context,'bandeau.png', None)
