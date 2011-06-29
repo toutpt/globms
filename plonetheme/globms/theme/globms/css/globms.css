@@ -1,6 +1,3 @@
-body{
-    background: #fff url('../images/bg.png') repeat-x;
-}
 .container_12,.popup,#header,#gbmscontent,#footer,#footercolumns,#gbmscolumn,#gbmscontentwrapper{
     background-color:#fff
 }
@@ -45,7 +42,7 @@ iframe { border-width: 0; border-style:none; }
 body {
     font-family: Arial;
     font-size: 13px;
-    background: White;
+    background: #fff url('../images/bg.png') repeat-x;
     color: #3b3b3c;
     /* width: 58em; margin: 1em auto; */
 }
