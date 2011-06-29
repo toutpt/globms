@@ -51,8 +51,18 @@
      />
    <browser:viewlet
      name="globalms.slideshow"
+     for="*"
      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
      class=".slideshow.SlideshowViewlet"
+     permission="zope2.View"
+     layer=".interfaces.IGlobMSLayer"
+     />
+   <browser:viewlet
+     name="globalms.slideshow"
+     for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+     manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+     class=".slideshow.SlideshowViewletRoot"
+     template="slideshow.pt"
      permission="zope2.View"
      layer=".interfaces.IGlobMSLayer"
      />
