@@ -1,5 +1,9 @@
 <div id="slideshowwrapper">
-<tal:block tal:repeat="slide view/slides">
-    <a tal:attributes="href slide/url"><img tal:attributes="src slide/src;alt slide/description;title slide/title"></a>
-</tal:block>
+<div class="scrollable" id="bandeau-home">
+   <div class="items">
+      <div tal:repeat="slide view/slides">
+        <a tal:attributes="href slide/url"><img tal:attributes="src slide/src;alt slide/description;title slide/title"></a>
+      </div>
+   </div>
+</div>
 </div>

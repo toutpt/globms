@@ -2357,11 +2357,18 @@ ul.navigation li.active a {
 /*
 http://flowplayer.org/tools/demos/scrollable/index.html
 */
-.scrollable {
-    position:relative;
-    overflow:hidden;
+#partners{
     width: 940px;
     height:110px;
+}
+#bandeau-home{
+	width:960px;
+	height:200px;
+}
+.scrollable{
+	position:relative;
+    overflow:hidden;
+    height:auto;
 }
 .scrollable .items {
     width:20000em;

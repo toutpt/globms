@@ -6,18 +6,31 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 class SlideshowViewletRoot(common.ViewletBase):
     def slides(self):
+        sections = self.context.objectIds()
+        catalog = self.context.portal_catalog
+        brains = catalog(portal_type="Image", getId="bandeau.png")
         slides = []
-        slideshow = getattr(self.context,'slideshow',None)
-        if slideshow is None:
-            return []
-        slide_ids = slideshow.objectIds()
-        for slide_id in slide_ids:
-            slide = getattr(slideshow,slide_id)
-            slide_url = slide.absolute_url()
-            slides.append({'src':slide_url+'/image_thumb','url':slide_url,
-                           'title':slide.Title(),
-                           'description':slide.Description()})
+        for brain in brains:
+            image = brain.getObject()
+            parent = image.aq_parent
+            slides.append({'src':brain.getURL(),
+                           'url':parent.absolute_url(),
+                           'title':parent.Title(),
+                           'description':parent.Description()})
         return slides
+
+#        slides = []
+#        slideshow = getattr(self.context,'slideshow',None)
+#        if slideshow is None:
+#            return []
+#        slide_ids = slideshow.objectIds()
+#        for slide_id in slide_ids:
+#            slide = getattr(slideshow,slide_id)
+#            slide_url = slide.absolute_url()
+#            slides.append({'src':slide_url+'/image_thumb','url':slide_url,
+#                           'title':slide.Title(),
+#                           'description':slide.Description()})
+#        return slides
 
     def block(self):
         block = getattr(self.context,'home-slide-block')
@@ -28,17 +41,14 @@ class SlideshowViewletRoot(common.ViewletBase):
 class SlideshowViewlet(common.ViewletBase):
     """Viewlet for slideshow on many pages"""
 
-    def index(self):
+    def bandeau(self):
         portal_state = component.getMultiAdapter((self.context, self.request),
                                          name=u'plone_portal_state')
         context_state = component.getMultiAdapter((self.context, self.request),
                                          name=u'plone_context_state')
-        portal = portal_state.portal()
-        context = self.context.aq_base
-        if context_state.is_default_page:
+        context = self.context
+        if context_state.is_default_page():
             context = context_state.parent()
-        slide = getattr(context,'bandeau.png', None)
-        if slide is None:
-            return u""
-        return slide.restrictedTraverse('slideshow.html')()
-
+        if 'bandeau.png' in context.objectIds():
+            return {'src':context.absolute_url()+'/bandeau.png',
+                    'alt':context.Title()}

@@ -1,0 +1,3 @@
+<div id="slideshowwrapper" tal:condition="view/bandeau">
+  <img tal:define="bandeau view/bandeau" tal:attributes="src bandeau/src;alt bandeau/alt"/>
+</div>
