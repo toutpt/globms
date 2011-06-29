@@ -54,6 +54,15 @@
      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
      class=".slideshow.SlideshowViewlet"
      permission="zope2.View"
+     layer=".interfaces.IGlobMSLayer"
      />
-
+   <browser:page
+     name="homepage"
+     for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+     class=".homepage.HomePage"
+     template="homepage.pt"
+     permission="zope2.View"
+     layer=".interfaces.IGlobMSLayer"
+     />
+     
 </configure>

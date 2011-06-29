@@ -1,0 +1,87 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plonetheme.globms">
+<body>
+<div metal:fill-slot="main" class="container_12">
+  <h1 id="pagetitle" class="grid_12 alpha omega hiddenStructure" tal:content="view/site_title"></h1>
+  <div class="clear"></div>
+
+    <div class="grid_3 alpha homecenterb" id="homecenterb0" tal:define="block python:view.block('project-management')" tal:condition="block">
+        <h2><a tal:attributes="href block/href" tal:content="block/title">block title</a></h2>
+        <a tal:attributes="href block/href"><img tal:attributes="src block/icon"/></a>
+        <p tal:replace="structure block/description"></p>
+    </div>
+    <div class="grid_3 homecenterb" id="homecenterb1" tal:define="block python:view.block('process-auditing')" tal:condition="block">
+        <h2><a tal:attributes="href block/href" tal:content="block/title">block title</a></h2>
+        <a tal:attributes="href block/href"><img tal:attributes="src block/icon"/></a>
+        <p tal:replace="structure block/description"></p>
+    </div>
+    <div class="grid_3 homecenterb" id="homecenterb2" tal:define="block python:view.block('technical-expertise')" tal:condition="block">
+        <h2><a tal:attributes="href block/href" tal:content="block/title">block title</a></h2>
+        <a tal:attributes="href block/href"><img tal:attributes="src block/icon"/></a>
+        <p tal:replace="structure block/description"></p>
+    </div>
+    <div class="grid_3 omega homecenterb" id="homecenterb3" tal:define="block python:view.block('short-assignments')" tal:condition="block">
+        <h2><a tal:attributes="href block/href" tal:content="block/title">block title</a></h2>
+        <a tal:attributes="href block/href"><img tal:attributes="src block/icon"/></a>
+        <p tal:replace="structure block/description"></p>
+    </div>
+
+  <div class="clear"></div>
+
+  <div id="blockhomebas-wrapper" class="container_12">
+   <div id="blockhomebas" class="grid_12 alpha omega">
+    <div class="grid_4 alpha blockhomebas" id="blockhomebas1" tal:define="block python:view.block('jobs-careers')" tal:condition="block">
+       <img tal:attributes="src block/icon"/>
+       <h2 tal:content="block/title">block title</h2>
+       <p tal:replace="structure block/description"></p>
+    </div>
+    <div class="grid_4 blockhomebas" id="blockhomebas2" tal:define="block python:view.block('it-and-financial-articles')" tal:condition="block">
+       <img tal:attributes="src block/icon"/>
+       <h2 tal:content="block/title">block title</h2>
+       <p tal:replace="structure block/description"></p>
+    </div>
+    <div class="grid_4 omega blockhomebas" id="blockhomebas3" tal:define="block python:view.block('global-market-solutions-on-the-web')" tal:condition="block">
+       <img tal:attributes="src block/icon"/>
+       <h2 tal:content="block/title">block title</h2>
+       <p tal:replace="structure block/description"></p>
+    </div>
+   </div>
+</div>
+<div class="clear"></div>
+<div class="container_12">
+
+
+<!-- root element for scrollable -->
+<div class="scrollable">
+
+   <!-- root element for the items -->
+   <div class="items">
+
+  <div tal:repeat="slides view/partners">
+   <tal:block repeat="block slides">
+    <tal:def define="extra_class string:grid_3 partenaire; index repeat/block/index;
+                   extra_class python:repeat['block'].start and extra_class + ' alpha' or extra_class;
+                   extra_class python:repeat['block'].end and extra_class + ' omega' or extra_class;">
+     <div tal:attributes="class extra_class">
+         <a tal:attributes="href block/url" target="_blank"><img tal:attributes="src block/src;alt block/alt"/></a>
+     </div>
+    </tal:def>
+   </tal:block>
+  </div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+$(".slidetabs").tabs(".images > div", {effect: 'fade',fadeOutSpeed: "fast",rotate: true}).slideshow();
+$(".scrollable").scrollable({circular:true}).autoscroll({interval:3000});
+$(".blockhomebas").equalHeights();
+</script>
+</div>
+</body>
+</html>

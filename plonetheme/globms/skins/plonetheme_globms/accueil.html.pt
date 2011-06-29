@@ -4,7 +4,7 @@
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       lang="en"
       metal:use-macro="here/main_template/macros/master"
-      i18n:domain="collective.googledocsviewer">
+      i18n:domain="plonetheme.globms">
 <body>
 <div metal:fill-slot="main" class="container_12">
   <h1 id="pagetitle" class="grid_12 alpha omega hiddenStructure">Global Market Solution: Financial Software Technology</h1>
@@ -13,6 +13,7 @@
   <tal:def define="extra_class string:grid_3 homecenterb; index repeat/block/index;
                    extra_class python:repeat['block'].start and extra_class + ' alpha' or extra_class;
                    extra_class python:repeat['block'].end and extra_class + ' omega' or extra_class;">
+
     <div tal:attributes="class extra_class;id string:homecenterb${repeat/block/index}">
         <h2 tal:content="block/Title">block title</h2>
         <img tal:define="scales block/@@images;
@@ -23,6 +24,7 @@
                                   height thumb/height" />
         <p tal:replace="structure block/getText"></p>
     </div>
+
   </tal:def>
   </tal:block>
 
