@@ -191,7 +191,8 @@ q {
   left:0;
   position:absolute;
   top:100%;
-  }
+  z-index: 30;
+}
 #portal-globalnav li:hover > ul,
 #portal-globalnav li:hover > div > ul {
   display:block;
@@ -2399,7 +2400,14 @@ http://flowplayer.org/tools/demos/scrollable/index.html
 	padding-top: 20px;
 }
 #section-project-management h1{
-	background: center bottom url('../images/trait0.png') repeat-x;
+    background: center bottom url('../images/trait0.png') repeat-x;
 }
-.section-text{
+#section-process-auditing h1{
+    background: center bottom url('../images/trait1.png') repeat-x;
+}
+#section-technical-expertise h1{
+    background: center bottom url('../images/trait2.png') repeat-x;
+}
+#section-short-assignments h1{
+    background: center bottom url('../images/trait3.png') repeat-x;
 }

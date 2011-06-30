@@ -5,7 +5,10 @@
     id="++resource++plone.app.jquerytools.plugins.js"
     enabled="True"/>
  <javascript 
-    id="++theme++plonetheme.globms/jquery.equalheights.js"
+    id="++theme++plonetheme.globms/js/jquery.equalheights.js"
+    enabled="True"/>
+ <javascript 
+    id="++theme++plonetheme.globms/js/jquery.imagesloaded.js"
     enabled="True"/>
 
 </object>

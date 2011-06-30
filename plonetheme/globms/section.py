@@ -22,10 +22,6 @@ class Section(BrowserView):
     def title(self):
         return self.context.Title()
 
-    def color(self):
-        """Return the color associated to this section"""
-        return self.settings['color']
-
     @property
     def site_url(self):
         return self.portal_state.portal_url()

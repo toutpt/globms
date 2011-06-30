@@ -78,7 +78,7 @@
 </div>
 
 <script type="text/javascript">
-jQuery(document).imagesLoaded(function(){
+$('body').imagesLoaded(function(){
 $(".slidetabs").tabs(".images > div", {effect: 'fade',fadeOutSpeed: "fast",rotate: true}).slideshow();
 $(".scrollable").scrollable({circular:true}).autoscroll({interval:3000});
 $(".blockhomebas").equalHeights();
