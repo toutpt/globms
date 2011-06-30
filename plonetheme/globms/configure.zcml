@@ -41,9 +41,16 @@
      template="footer.pt"
      layer=".interfaces.IGlobMSLayer"
      />
+   <browser:page
+     name="colophon-controlpanel"
+     for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+     class=".colophon.ColophonControlPanelView"
+     permission="cmf.ManagePortal"
+     />
    <browser:viewlet
      name="plone.colophon"
      for="*"
+     class=".colophon.Colophon"
      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
      permission="zope.Public"
      template="colophon.pt"

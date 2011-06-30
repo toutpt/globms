@@ -41,6 +41,9 @@ class HomePage(BrowserView):
         except KeyError:
             self.context.plone_log('key error: %s'%blockid)
             return
+        if block is None:
+            self.context.plone_log('no block: %s'%blockid)
+            return
         icon = getattr(block, ICON, None)
         if icon is not None:
             icon = icon.absolute_url()

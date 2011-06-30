@@ -1,4 +1,4 @@
 <div class="container_12" id="footercolumns"
-  ><tal:block repeat="block python:here.getMyBlocks('blocks_footer')"
-    ><div class="grid_3" tal:content="structure block/getText"></div></tal:block>
+  ><tal:block repeat="column view/columns"
+    ><div class="grid_3"><div tal:repeat="link column" tal:replace="structure link"></div></div></tal:block>
 </div>

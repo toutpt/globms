@@ -1,0 +1,3 @@
+<registry>
+    <records interface="plonetheme.globms.colophon.IColophon" />
+</registry>
