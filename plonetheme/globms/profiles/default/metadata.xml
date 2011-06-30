@@ -1,4 +1,9 @@
 <?xml version="1.0"?>
 <metadata>
   <version>110</version>
+  <dependencies>
+    <dependency>profile-Products.PloneFormGen:default</dependency>
+    <dependency>profile-collective.configviews:default</dependency>
+    <dependency>profile-plone.app.theming:default</dependency>
+  </dependencies>
 </metadata>

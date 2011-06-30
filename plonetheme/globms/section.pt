@@ -1,0 +1,26 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plonetheme.globms">
+<body>
+<div metal:fill-slot="main" tal:attributes="id view/section_id" class="section-view">
+
+     <div id="viewlet-above-content-title" tal:content="structure provider:plone.abovecontenttitle" tal:condition="not:ajax_load" />
+     <img class="section-icon" alt="icon" tal:attributes="src view/icon"/>
+     <h1 tal:content="view/title">title</h1>
+     <div id="viewlet-below-content-title" tal:content="structure provider:plone.belowcontenttitle" tal:condition="not:ajax_load" />
+
+     <div id="viewlet-above-content-body" tal:content="structure provider:plone.abovecontentbody" tal:condition="not:ajax_load" />
+     <div id="content-core" class="grid_9 alpha omega">
+       <div class="section-image grid_3 alpha"><img tal:attributes="src view/image"/></div>
+       <div class="section-text grid_6 omega" tal:content="structure view/context/getText">
+     </div>
+
+     </div>
+     <div id="viewlet-below-content-body" tal:content="structure provider:plone.belowcontentbody" tal:condition="not:ajax_load" />
+</div>
+</body>
+</html>

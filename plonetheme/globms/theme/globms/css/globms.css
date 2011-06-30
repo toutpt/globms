@@ -2386,4 +2386,20 @@ http://flowplayer.org/tools/demos/scrollable/index.html
 .items div {
     float:left;
 }
-
+/* section */
+.section-icon{
+	float:left;
+}
+.section-view h1{
+	height: 50px;
+	padding-top: 15px;
+	padding-left: 80px;
+}
+.section-view #content-core{
+	padding-top: 20px;
+}
+#section-project-management h1{
+	background: center bottom url('../images/trait0.png') repeat-x;
+}
+.section-text{
+}
