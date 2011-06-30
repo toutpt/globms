@@ -2238,13 +2238,22 @@ div.overlay .formControls a {
 .blockhomebas h2{
     font-size:13px;
     font-weight: bold;
-    margin-top:20px;
+    margin-top:10px;
 }
-.blockhomebas img{float:left;margin:20px;}
+.blockhomebas img{
+	float:left;
+	margin:10px;
+	width:50px;
+}
 #blockhomebas0,
 #blockhomebas1{
     border-right: 1px solid #e6eaee;
     margin-right: 9px;/* border + margin = 10px */
+}
+.blockhomebas p,
+.blockhomebas h2{
+	float:right;
+	width:220px;
 }
 #footertext{
     background-color:#f4f5f7;

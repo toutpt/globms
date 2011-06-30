@@ -35,20 +35,20 @@
 
   <div id="blockhomebas-wrapper" class="container_12">
    <div id="blockhomebas" class="grid_12 alpha omega">
-    <div class="grid_4 alpha blockhomebas" id="blockhomebas1" tal:define="block python:view.block('jobs-careers')" tal:condition="block">
+    <div class="grid_4 alpha blockhomebas" id="blockhomebas0" tal:define="block python:view.block('jobs-careers')" tal:condition="block">
        <img tal:attributes="src block/icon"/>
        <h2 tal:content="block/title">block title</h2>
-       <p tal:replace="structure block/description"></p>
+       <p tal:content="structure block/description"></p>
     </div>
-    <div class="grid_4 blockhomebas" id="blockhomebas2" tal:define="block python:view.block('it-and-financial-articles')" tal:condition="block">
+    <div class="grid_4 blockhomebas" id="blockhomebas1" tal:define="block python:view.block('it-and-financial-articles')" tal:condition="block">
        <img tal:attributes="src block/icon"/>
        <h2 tal:content="block/title">block title</h2>
-       <p tal:replace="structure block/description"></p>
+       <p tal:content="structure block/description"></p>
     </div>
-    <div class="grid_4 omega blockhomebas" id="blockhomebas3" tal:define="block python:view.block('global-market-solutions-on-the-web')" tal:condition="block">
+    <div class="grid_4 omega blockhomebas" id="blockhomebas2" tal:define="block python:view.block('global-market-solutions-on-the-web')" tal:condition="block">
        <img tal:attributes="src block/icon"/>
        <h2 tal:content="block/title">block title</h2>
-       <p tal:replace="structure block/description"></p>
+       <p tal:content="structure block/description"></p>
     </div>
    </div>
 </div>
@@ -78,9 +78,11 @@
 </div>
 
 <script type="text/javascript">
+jQuery(document).imagesLoaded(function(){
 $(".slidetabs").tabs(".images > div", {effect: 'fade',fadeOutSpeed: "fast",rotate: true}).slideshow();
 $(".scrollable").scrollable({circular:true}).autoscroll({interval:3000});
 $(".blockhomebas").equalHeights();
+});
 </script>
 </div>
 </body>
