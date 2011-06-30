@@ -2,10 +2,6 @@ from zope import component
 from zope import interface
 from zope import schema
 
-from plone.autoform.interfaces import WIDGETS_KEY
-from collective.configviews import ConfigurableBaseView
-from collective.z3cform.colorpicker.colorpicker import ColorpickerFieldWidget
-
 from Products.Five import BrowserView
 
 class Section(BrowserView):

@@ -29,8 +29,6 @@ setup(name='plonetheme.globms',
           'Products.LinguaPlone',
           'webcouturier.dropdownmenu',
           'Products.PloneFormGen',
-          'collective.configviews',
-          'collective.z3cform.colorpicker',
            # -*- Extra requirements: -*-
       ],
       entry_points="""
