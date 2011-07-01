@@ -11,6 +11,8 @@ class SlideshowViewletRoot(common.ViewletBase):
         brains = catalog(portal_type="Image", getId="bandeau.png")
         slides = []
         for brain in brains:
+            if brain.exclude_from_nav:
+                continue
             image = brain.getObject()
             parent = image.aq_parent
             slides.append({'src':brain.getURL(),
