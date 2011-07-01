@@ -1,0 +1,4 @@
+<div id="globms-links"><ul><li><a 
+  title="Global Market Solution on Linkedin" href="http://www.linkedin.com/company/global-marketing-solutions"><span id="globms-linkedin"></span></a></li><li><a 
+  title="Global Market Solution on Viadeo" href="http://www.viadeo.com/"><span id="globms-viadeo"></span></a></li><li><a
+  title="Global Market Solution RSS" tal:attributes="href string:${view/site_url}/flux-rss"><span id="globms-rss"></span></a></li></ul></div>

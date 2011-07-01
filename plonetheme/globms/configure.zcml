@@ -76,6 +76,15 @@
      permission="zope2.View"
      layer=".interfaces.IGlobMSLayer"
      />
+   <browser:viewlet
+     name="globalms.links"
+     for="*"
+     manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+     class="plone.app.layout.viewlets.common.ViewletBase"
+     template="links.pt"
+     permission="zope2.View"
+     layer=".interfaces.IGlobMSLayer"
+     />
    <browser:page
      name="homepage"
      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
