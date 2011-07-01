@@ -13,22 +13,22 @@
     <div class="grid_3 alpha homecenterb" id="homecenterb0" tal:define="block python:view.block('project-management')" tal:condition="block">
         <h2><a tal:attributes="href block/href" tal:content="block/title">block title</a></h2>
         <a tal:attributes="href block/href"><img tal:attributes="src block/icon"/></a>
-        <p tal:replace="structure block/description"></p>
+        <p tal:content="structure block/description"></p>
     </div>
     <div class="grid_3 homecenterb" id="homecenterb1" tal:define="block python:view.block('process-auditing')" tal:condition="block">
         <h2><a tal:attributes="href block/href" tal:content="block/title">block title</a></h2>
         <a tal:attributes="href block/href"><img tal:attributes="src block/icon"/></a>
-        <p tal:replace="structure block/description"></p>
+        <p tal:content="structure block/description"></p>
     </div>
     <div class="grid_3 homecenterb" id="homecenterb2" tal:define="block python:view.block('technical-expertise')" tal:condition="block">
         <h2><a tal:attributes="href block/href" tal:content="block/title">block title</a></h2>
         <a tal:attributes="href block/href"><img tal:attributes="src block/icon"/></a>
-        <p tal:replace="structure block/description"></p>
+        <p tal:content="structure block/description"></p>
     </div>
     <div class="grid_3 omega homecenterb" id="homecenterb3" tal:define="block python:view.block('short-assignments')" tal:condition="block">
         <h2><a tal:attributes="href block/href" tal:content="block/title">block title</a></h2>
         <a tal:attributes="href block/href"><img tal:attributes="src block/icon"/></a>
-        <p tal:replace="structure block/description"></p>
+        <p tal:content="structure block/description"></p>
     </div>
 
   <div class="clear"></div>
@@ -36,18 +36,18 @@
   <div id="blockhomebas-wrapper" class="container_12">
    <div id="blockhomebas" class="grid_12 alpha omega">
     <div class="grid_4 alpha blockhomebas" id="blockhomebas0" tal:define="block python:view.block('jobs-careers')" tal:condition="block">
-       <img tal:attributes="src block/icon"/>
-       <h2 tal:content="block/title">block title</h2>
+       <a tal:attributes="href block/href;title block/title"><img tal:attributes="src block/icon"/></a>
+       <h2><a tal:attributes="href block/href;title block/title" tal:content="block/title">block title</a></h2>
        <p tal:content="structure block/description"></p>
     </div>
     <div class="grid_4 blockhomebas" id="blockhomebas1" tal:define="block python:view.block('it-and-financial-articles')" tal:condition="block">
-       <img tal:attributes="src block/icon"/>
-       <h2 tal:content="block/title">block title</h2>
+       <a tal:attributes="href block/href;title block/title"><img tal:attributes="src block/icon"/></a>
+       <h2><a tal:attributes="href block/href;title block/title" tal:content="block/title">block title</a></h2>
        <p tal:content="structure block/description"></p>
     </div>
     <div class="grid_4 omega blockhomebas" id="blockhomebas2" tal:define="block python:view.block('global-market-solutions-on-the-web')" tal:condition="block">
-       <img tal:attributes="src block/icon"/>
-       <h2 tal:content="block/title">block title</h2>
+       <a tal:attributes="href block/href;title block/title"><img tal:attributes="src block/icon"/></a>
+       <h2><a tal:attributes="href block/href;title block/title" tal:content="block/title">block title</a></h2>
        <p tal:content="structure block/description"></p>
     </div>
    </div>
