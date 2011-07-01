@@ -153,6 +153,7 @@ q {
     -moz-border-radius-bottomleft: 0.5em;
     -moz-border-radius-bottomright: 0.5em;
 }
+
 /* DropDown Menu Styles */
 
 #portal-top {
@@ -255,6 +256,20 @@ a.hasDropDown {
     -moz-border-radius-bottomleft: 0.5em;
     -moz-border-radius-bottomright: 0.5em;
     max-width: 50%;
+}
+#portal-languageselector .currentLanguage a{
+    text-decoration:underline;
+}
+#langselector{
+    font-size: 11px;
+    width:300px;
+}
+#langselector img{
+    padding-right:5px;
+}
+#langselector li{
+    width:80px;
+    display:inline-block;
 }
 
 #portal-searchbox {
@@ -565,13 +580,13 @@ dl.portlet {
 
 #content a:link,
 dl.portlet a:link {
-    color: #205c90;
+    color: #3b3b3c;
     border-bottom: 0.1em solid #ccc;
 }
 
 #content a:visited,
 dl.portlet a:visited {
-    color: #427597;
+    color: #3b3b3c;
     border-bottom: 0.1em solid #ccc;
 }
 #content a:hover,
@@ -1046,7 +1061,8 @@ dl.error dd {
     padding-top: 0.5em;
 }
 #portal-personaltools dd {
-    background: #e3e3e3;
+    background: #fff;
+    border:1px solid #ddd;
     padding-bottom: 0.5em;
 }
 #portal-personaltools dd a {
@@ -2191,71 +2207,6 @@ div.overlay .formControls a {
 }
 /* @end */
 
-/* @group globms */
-#langselector{
-    font-size: 11px;
-    width:300px;
-}
-#langselector img{
-    padding-right:5px;
-}
-#langselector li{
-    width:80px;
-    display:inline-block;
-}
-
-#slideshowwrapper{
-    width:960px;
-    color:#fff;
-    background-color: #35424a;
-}
-#rightblock h2{color:#fff;}
-#rightblock{color:#fff;}
-
-#portal-languageselector .currentLanguage a{
-    text-decoration:underline;
-}
-.homecenterb{
-    font-size:11px;
-    color:#3b3b3c;
-}
-.homecenterb h2{
-    font-size:16px;
-    font-weight: bold;
-    padding:10px 0 10px 10px;
-}
-.homecenterb p{
-    margin-left:10px;
-    margin-right:10px;
-}
-.homecenterb img{
-    float:left;
-    margin: 0 10px 10px 10px;
-}
-.blockhomebas{
-    font-size:11px;
-    color:#5b5b5b;
-}
-.blockhomebas h2{
-    font-size:13px;
-    font-weight: bold;
-    margin-top:10px;
-}
-.blockhomebas img{
-	float:left;
-	margin:10px;
-	width:50px;
-}
-#blockhomebas0,
-#blockhomebas1{
-    border-right: 1px solid #e6eaee;
-    margin-right: 9px;/* border + margin = 10px */
-}
-.blockhomebas p,
-.blockhomebas h2{
-	float:right;
-	width:220px;
-}
 #footertext{
     background-color:#f4f5f7;
     padding-top:1em;
@@ -2290,13 +2241,13 @@ div.overlay .formControls a {
 	text-decoration:underline;
 }
 
-#globmslinks{
+#globms-links{
     width:55px;height:14px;
     float:right;
     text-align: right;
     margin:15px 0;
 }
-#globmslinks ul li span{
+#globms-links ul li span{
     width:14px;height:14px;
     display:inline-block;
 }
@@ -2337,23 +2288,71 @@ ul.navigation li.active a {
 	color: #75ad0a;
 }
 
-/* HOME PAGE SLIDESHOW*/
+/* HOME PAGE */
 #slideshow-wrapper{
     background-image:url('../images/bghomeblockright.png');
 }
-
-
-/* HOME PAGE CENTER */
 .homecenterb{
     background: #fff url('../images/bghomecentral.png') repeat-x;
+    font-size:11px;
+    color:#3b3b3c;
 }
+.homecenterb h2{
+    font-size:16px;
+    font-weight: bold;
+    padding:10px 0 10px 10px;
+}
+div.homecenterb h2 a{
+    color:#3b3b3c;
+}
+.homecenterb p{
+    margin-left:10px;
+    margin-right:10px;
+}
+.homecenterb img{
+    float:left;
+    margin: 0 10px 10px 10px;
+}
+
 #homecenterb0 h2{background: url('../images/trait0.png') no-repeat;}
 #homecenterb1 h2{background: url('../images/trait1.png') no-repeat;}
 #homecenterb2 h2{background: url('../images/trait2.png') no-repeat;}
 #homecenterb3 h2{background: url('../images/trait3.png') no-repeat;}
 
+#slideshowwrapper{
+    width:960px;
+    color:#fff;
+    background-color: #35424a;
+}
+#rightblock h2{color:#fff;}
+#rightblock{color:#fff;}
 
-/* HOME PAGE LAST */
+
+.blockhomebas{
+    font-size:11px;
+    color:#5b5b5b;
+}
+.blockhomebas h2{
+    font-size:13px;
+    font-weight: bold;
+    margin-top:10px;
+}
+.blockhomebas img{
+    float:left;
+    margin:10px;
+    width:50px;
+}
+#blockhomebas0,
+#blockhomebas1{
+    border-right: 1px solid #e6eaee;
+    margin-right: 9px;/* border + margin = 10px */
+}
+.blockhomebas p,
+.blockhomebas h2{
+    float:right;
+    width:220px;
+}
+
 #blockhomebas-wrapper{
     margin-top:30px;
     margin-bottom: 30px;
