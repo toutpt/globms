@@ -1,6 +1,3 @@
-.container_12,.popup,#header,#gbmscontent,#footer,#footercolumns,#gbmscolumn,#gbmscontentwrapper{
-    background-color:#fff
-}
 /*
   CHANGELOG for globms project
   - remove #portal-logo margin
@@ -39,7 +36,7 @@ iframe { border-width: 0; border-style:none; }
 
 /* @group Basics */
 
-body {
+body.plonesite {
     font-family: Arial;
     font-size: 13px;
     background: #fff url('../images/bg.png') repeat-x;
@@ -2093,33 +2090,33 @@ div.overlay .formControls a {
 */
 
 .icons-on .contenttype-document {
-    background: no-repeat transparent 0px 4px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px 4px url(../images/contenttypes-sprite.png);
 }
 .icons-on .contenttype-event {
-    background: no-repeat transparent 0px -212px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -212px url(../images/contenttypes-sprite.png);
 }
 .icons-on .contenttype-folder {
-    background: no-repeat transparent 0px -644px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -644px url(../images/contenttypes-sprite.png);
 }
 .icons-on .contenttype-link {
-    background: no-repeat transparent 0px -1076px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -1076px url(../images/contenttypes-sprite.png);
 }
 .icons-on .contenttype-news-item {
-    background: no-repeat transparent 0px -1292px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -1292px url(../images/contenttypes-sprite.png);
 }
 .icons-on .contenttype-plone-site {
-    background: no-repeat transparent 0px -1508px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -1508px url(../images/contenttypes-sprite.png);
 }
 .icons-on .contenttype-topic {
-    background: no-repeat transparent 0px -1724px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -1724px url(../images/contenttypes-sprite.png);
 }
 
 /* These should only appear in the add menu */
 .icons-on #plone-contentmenu-factories .contenttype-file {
-    background: no-repeat transparent 0px -428px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -428px url(../images/contenttypes-sprite.png);
 }
 .icons-on #plone-contentmenu-factories .contenttype-image {
-    background: no-repeat transparent 0px -860px url(contenttypes-sprite.png);
+    background: no-repeat transparent 0px -860px url(../images/contenttypes-sprite.png);
 }
 
 .icons-on .contenttype-document,
@@ -2409,4 +2406,7 @@ http://flowplayer.org/tools/demos/scrollable/index.html
 }
 #section-short-assignments h1{
     background: center bottom url('../images/trait3.png') repeat-x;
+}
+.container_12,body.popup,#header,#gbmscontent,#footer,#footercolumns,#gbmscolumn,#gbmscontentwrapper{
+    background-color:#fff
 }
