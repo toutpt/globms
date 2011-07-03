@@ -45,11 +45,13 @@ class HomePage(BrowserView):
     def lang(self):
         return self.portal_state.language()
 
-    def is_default_lang(self):
-        return self.portal_state.default_language() == self.lang
+    @property
+    def default_lang(self):
+        return self.portal_state.default_language()
 
     def block(self, blockid):
-        dl = self.is_default_lang()
+
+        dl = self.default_lang
         l = self.lang
         try:
             path = self.blocks_ids[blockid]
@@ -58,11 +60,28 @@ class HomePage(BrowserView):
             self.context.plone_log('key error: %s'%blockid)
             return
         if block is None:
-            self.context.plone_log('no block: %s'%blockid)
-            return
-        #Try to find translations:
-        if not dl:
-            block = block.getTranslation(language=l)
+            #try to get if from default lang
+            portal = self.portal_state.portal()
+            try:
+                block = portal.restrictedTraverse(dl+'/'+path)
+            except KeyError:
+                pass
+            except AttributeError:
+                pass
+            if block is None:
+                self.context.plone_log('no block: %s'%blockid)
+                return
+
+        if not l==dl:
+            #Try to find translations:
+            default_page = block.getDefaultPage()
+            if default_page is not None:
+                btrans = block[default_page].getTranslation(language=l)
+            else:
+                btrans = block.getTranslation(language=l)
+            if btrans is not None:
+                block = btrans
+
         icon = getattr(block, ICON, None)
         if icon is not None:
             icon = icon.absolute_url()
