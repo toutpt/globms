@@ -87,7 +87,7 @@
      />
    <browser:page
      name="homepage"
-     for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+     for="*"
      menu="plone_displayviews"
      title="Home page"
      class=".homepage.HomePage"

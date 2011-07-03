@@ -1,42 +1,58 @@
+from zope import component
+from zope import interface
+from zope import schema
+
+from plone.registry.interfaces import IRegistry
+from plone.memoize import view
 from Products.Five import BrowserView
 
 ICON = 'icon.png'
 
+class IHomePageSettings(interface.Interface):
+    
+    blocks_ids = schema.List(title=u"Blocks ids",
+                             description=u"Put id|path, one per line",
+                             value_type=schema.ASCIILine(title=u"Block"))
+
 class HomePage(BrowserView):
     """home page of the globms website"""
-    blocks_ids={'project-management':{'en':'our-services/project-management',
-                                      'fr':'nos-services/gestion-de-projet',
-                                      'de':''},
-                'process-auditing':{'en':'our-services/process-auditing',
-                                 'fr':'nos-services/audition',
-                                 'de':''},
-                'technical-expertise':{'en':'our-services/technical-expertise',
-                                 'fr':'expertise-technique',
-                                 'de':''},
-                'short-assignments':{'en':'our-services/short-assignments',
-                                    'fr':'',
-                                    'de':''},
-                'jobs-careers':{'en':'jobs-careers',
-                                'fr':'offres-emplois',
-                                'de':''},
-                'it-and-financial-articles':{'en':'news-and-articles/it-and-financial-articles',
-                                'fr':'actualites-et-articles/articles-it-et-financier',
-                                'de':''},
-                'global-market-solutions-on-the-web':{'en':'global-market-solutions/on-the-web',
-                                'fr':'global-market-solutions/sur-le-web',
-                                'de':''}}
-    color = {'project-management':'#aaa',
-             'process-auditing':'#bbb',
-             'technical-expertise':'#ccc',
-             'short-assignments':'#ddd'}
+
+#project-management|our-services/project-management    
+#process-auditing|our-services/process-auditing
+#technical-expertise|our-services/technical-expertise
+#short-assignments|our-services/short-assignments
+#jobs-careers|jobs-careers
+#it-and-financial-articles|news-and-articles/it-and-financial-articles
+#global-market-solutions-on-the-web|global-market-solutions/on-the-web
+
+    @property
+    @view.memoize_contextless
+    def blocks_ids(self):
+        blocks_ids = {}
+        registry = component.getUtility(IRegistry)
+        records = registry.forInterface(IHomePageSettings, check=False)
+        for block_id in records.blocks_ids:
+            id,path = block_id.split('|')
+            blocks_ids[id]=path
+        return blocks_ids
+
+    @property
+    def portal_state(self):
+        return component.getMultiAdapter((self.context, self.request),
+                                         name="plone_portal_state")
 
     @property
     def lang(self):
-        return 'en'
+        return self.portal_state.language()
+
+    def is_default_lang(self):
+        return self.portal_state.default_language() == self.lang
 
     def block(self, blockid):
+        dl = self.is_default_lang()
+        l = self.lang
         try:
-            path = self.blocks_ids[blockid][self.lang]
+            path = self.blocks_ids[blockid]
             block = self.context.restrictedTraverse(path,None)
         except KeyError:
             self.context.plone_log('key error: %s'%blockid)
@@ -44,14 +60,16 @@ class HomePage(BrowserView):
         if block is None:
             self.context.plone_log('no block: %s'%blockid)
             return
+        #Try to find translations:
+        if not dl:
+            block = block.getTranslation(language=l)
         icon = getattr(block, ICON, None)
         if icon is not None:
             icon = icon.absolute_url()
         title = block.Title()
         description = block.Description()
-        color = self.color.get(blockid,None)
         return {'icon':icon,'title':title,'description':description,
-                'color':color,'href':block.absolute_url()}
+                'href':block.absolute_url()}
 
     def site_title(self):
         return u"Global Market Solution: Financial Software Technology"
@@ -60,6 +78,9 @@ class HomePage(BrowserView):
         try:
             partners = self.context.restrictedTraverse('partners')
         except KeyError:
+            self.context.plone_log('no partners folder')
+            return
+        except AttributeError:
             self.context.plone_log('no partners folder')
             return
         blocks = []
@@ -84,5 +105,5 @@ class HomePage(BrowserView):
             if totaux == len_partners:
                 blocks.append(slide)
 
-        self.context.plone_log(blocks)
         return blocks
+

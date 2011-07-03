@@ -1,3 +1,4 @@
 <registry>
     <records interface="plonetheme.globms.colophon.IColophon" />
+    <records interface="plonetheme.globms.homepage.IHomePageSettings" />
 </registry>

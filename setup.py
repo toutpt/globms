@@ -29,6 +29,7 @@ setup(name='plonetheme.globms',
           'Products.LinguaPlone',
           'webcouturier.dropdownmenu',
           'Products.PloneFormGen',
+          'collective.seo',
            # -*- Extra requirements: -*-
       ],
       entry_points="""
