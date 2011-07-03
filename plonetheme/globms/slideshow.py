@@ -3,8 +3,28 @@ from zope import component
 from plone.app.layout.viewlets import common
 
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from plone.app.layout.navigation.interfaces import INavigationRoot
 
-class SlideshowViewletRoot(common.ViewletBase):
+class SlideshowViewlet(common.ViewletBase):
+    """Viewlet for slideshow on many pages"""
+
+    def is_home(self):
+        return INavigationRoot.providedBy(self.context)
+
+    def bandeau(self):
+        portal_state = component.getMultiAdapter((self.context, self.request),
+                                         name=u'plone_portal_state')
+        context_state = component.getMultiAdapter((self.context, self.request),
+                                         name=u'plone_context_state')
+        context = self.context
+
+        if context_state.is_default_page():
+            context = context_state.parent()
+
+        if 'bandeau.png' in context.objectIds():
+            return {'src':context.absolute_url()+'/bandeau.png',
+                    'alt':context.Title()}
+
     def slides(self):
         sections = self.context.objectIds()
         catalog = self.context.portal_catalog
@@ -20,37 +40,3 @@ class SlideshowViewletRoot(common.ViewletBase):
                            'title':parent.Title(),
                            'description':parent.Description()})
         return slides
-
-#        slides = []
-#        slideshow = getattr(self.context,'slideshow',None)
-#        if slideshow is None:
-#            return []
-#        slide_ids = slideshow.objectIds()
-#        for slide_id in slide_ids:
-#            slide = getattr(slideshow,slide_id)
-#            slide_url = slide.absolute_url()
-#            slides.append({'src':slide_url+'/image_thumb','url':slide_url,
-#                           'title':slide.Title(),
-#                           'description':slide.Description()})
-#        return slides
-
-    def block(self):
-        block = getattr(self.context,'home-slide-block')
-        return {'title':block.Title(),
-                'description':block.Description(),
-                'img':self.context.absolute_url()+'/home-slide-block.jpg'}
-
-class SlideshowViewlet(common.ViewletBase):
-    """Viewlet for slideshow on many pages"""
-
-    def bandeau(self):
-        portal_state = component.getMultiAdapter((self.context, self.request),
-                                         name=u'plone_portal_state')
-        context_state = component.getMultiAdapter((self.context, self.request),
-                                         name=u'plone_context_state')
-        context = self.context
-        if context_state.is_default_page():
-            context = context_state.parent()
-        if 'bandeau.png' in context.objectIds():
-            return {'src':context.absolute_url()+'/bandeau.png',
-                    'alt':context.Title()}

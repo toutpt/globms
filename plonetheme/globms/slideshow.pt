@@ -1,4 +1,7 @@
-<div id="slideshowwrapper">
+<div id="slideshowwrapper" tal:condition="view/bandeau">
+  <img tal:define="bandeau view/bandeau" tal:attributes="src bandeau/src;alt bandeau/alt"/>
+</div>
+<div id="slideshowwrapper" tal:condition="view/is_home">
 <div class="scrollable" id="bandeau-home">
    <div class="items">
       <div tal:repeat="slide view/slides">
