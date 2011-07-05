@@ -2305,6 +2305,7 @@ div.homecenterb h2 a{
 .homecenterb p{
     margin-left:10px;
     margin-right:10px;
+    text-align:justify;
 }
 .homecenterb img{
     float:left;
@@ -2328,6 +2329,7 @@ div.homecenterb h2 a{
 .blockhomebas{
     font-size:11px;
     color:#5b5b5b;
+    text-align: justify;
 }
 .blockhomebas h2{
     font-size:13px;
