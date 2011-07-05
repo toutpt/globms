@@ -73,10 +73,13 @@ class HomePage(BrowserView):
                 return
 
         if not l==dl:
+            btrans = None
             #Try to find translations:
             default_page = block.getDefaultPage()
             if default_page is not None:
-                btrans = block[default_page].getTranslation(language=l)
+                trans = block[default_page].getTranslation(language=l)
+                if trans is not None:
+                    btrans = trans.aq_parent
             else:
                 btrans = block.getTranslation(language=l)
             if btrans is not None:
