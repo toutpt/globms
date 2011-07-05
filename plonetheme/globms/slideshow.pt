@@ -1,12 +1,16 @@
-<div id="slideshowwrapper" tal:condition="view/bandeau">
+<div class="clear"></div>
+<div id="slideshow-wrapper" tal:condition="view/bandeau">
   <img tal:define="bandeau view/bandeau" tal:attributes="src bandeau/src;alt bandeau/alt"/>
 </div>
-<div id="slideshowwrapper" tal:condition="view/is_home">
-<div class="scrollable" id="bandeau-home">
-   <div class="items">
-      <div tal:repeat="slide view/slides">
-        <a tal:attributes="href slide/url"><img tal:attributes="src slide/src;alt slide/description;title slide/title"></a>
-      </div>
-   </div>
-</div>
+<div id="slideshow-wrapper" tal:condition="view/is_home">
+    <div id="home-news">
+        TOTO
+    </div>
+    <div class="scrollable" id="bandeau-home">
+       <div class="items">
+          <div tal:repeat="slide view/slides">
+            <a tal:attributes="href slide/url"><img tal:attributes="src slide/src;alt slide/description;title slide/title"></a>
+          </div>
+       </div>
+    </div>
 </div>

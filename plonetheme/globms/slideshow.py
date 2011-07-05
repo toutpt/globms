@@ -28,7 +28,7 @@ class SlideshowViewlet(common.ViewletBase):
     def slides(self):
         sections = self.context.objectIds()
         catalog = self.context.portal_catalog
-        brains = catalog(portal_type="Image", getId="bandeau.png")
+        brains = catalog(portal_type="Image", getId="bandeau-home.png")
         slides = []
         for brain in brains:
             if brain.exclude_from_nav:

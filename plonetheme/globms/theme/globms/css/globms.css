@@ -2317,8 +2317,7 @@ div.homecenterb h2 a{
 #homecenterb2 h2{background: url('../images/trait2.png') no-repeat;}
 #homecenterb3 h2{background: url('../images/trait3.png') no-repeat;}
 
-#slideshowwrapper{
-    width:960px;
+#slideshow-wrapper{
     color:#fff;
     background-color: #35424a;
 }
@@ -2370,7 +2369,12 @@ http://flowplayer.org/tools/demos/scrollable/index.html
     height:110px;
 }
 #bandeau-home{
-	width:960px;
+	width:700px;
+	height:200px;
+}
+#home-news{
+	float:right;
+	width:240px;
 	height:200px;
 }
 .scrollable{
