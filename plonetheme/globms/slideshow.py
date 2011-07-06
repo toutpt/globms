@@ -40,3 +40,17 @@ class SlideshowViewlet(common.ViewletBase):
                            'title':parent.Title(),
                            'description':parent.Description()})
         return slides
+
+    def home_news(self):
+        catalog = self.context.portal_catalog
+        query = {'portal_type':'News Item',
+                 'sort_on':'effective',
+                 'sort_order':'reverse',
+                 'limit':1}
+        brains = catalog(**query)
+        if brains:
+            news = brains[0]
+            return {'title':news.Title,
+                    'description':news.Description,
+                    'image':news.getURL()+'/image_mini',
+                    'url':news.getURL()}

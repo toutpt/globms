@@ -2309,7 +2309,7 @@ div.homecenterb h2 a{
 }
 .homecenterb img{
     float:left;
-    margin: 0 10px 10px 10px;
+    margin: 0 10px 0 10px;
 }
 
 #homecenterb0 h2{background: url('../images/trait0.png') no-repeat;}
@@ -2370,13 +2370,20 @@ http://flowplayer.org/tools/demos/scrollable/index.html
 }
 #bandeau-home{
 	width:700px;
-	height:200px;
+	height:269px;
 }
 #home-news{
 	float:right;
 	width:240px;
-	height:200px;
 }
+#home-news h2 a{
+	color: white;
+}
+#home-news p{
+    padding-top:5px;
+    padding-bottom:5px;
+}
+
 .scrollable{
 	position:relative;
     overflow:hidden;
