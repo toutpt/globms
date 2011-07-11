@@ -30,6 +30,7 @@ setup(name='plonetheme.globms',
           'webcouturier.dropdownmenu',
           'Products.PloneFormGen',
           'collective.seo',
+          'collective.googleanalytics',
            # -*- Extra requirements: -*-
       ],
       entry_points="""

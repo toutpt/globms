@@ -2271,7 +2271,7 @@ div.overlay .formControls a {
 /* #portal-globalnav li{line-height: 3em;} */
 
 ul.navigation li a,ul.navigation li a:visited {
-	padding: 10px 12px;
+	padding: 10px 20px 10px 20px;
 	color: #606060;
 	font-weight: bold;
 	border-right: 1px solid #c5c5c5;
@@ -2283,6 +2283,11 @@ ul.navigation li a:hover {
 ul.navigation li.selected a,
 ul.navigation li.active a {
 	color: #75ad0a;
+}
+#portaltab-contact a,
+#portaltab-contactez-nous a,
+#portaltab-contact-us a{
+	border-right:none;
 }
 
 /* HOME PAGE */
@@ -2329,6 +2334,7 @@ div.homecenterb h2 a{
     font-size:11px;
     color:#5b5b5b;
     text-align: justify;
+    height:130px;
 }
 .blockhomebas h2{
     font-size:13px;
@@ -2347,8 +2353,8 @@ div.homecenterb h2 a{
 }
 .blockhomebas p,
 .blockhomebas h2{
-    float:right;
-    width:220px;
+    margin-left:71px;
+    margin-right:10px;
 }
 
 #blockhomebas-wrapper{

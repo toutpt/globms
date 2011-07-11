@@ -46,8 +46,8 @@
        <p tal:content="structure block/description"></p>
     </div>
     <div class="grid_4 omega blockhomebas" id="blockhomebas2" tal:define="block python:view.block('global-market-solutions-on-the-web')" tal:condition="block">
-       <a tal:attributes="href block/href;title block/title"><img tal:attributes="src block/icon"/></a>
-       <h2><a tal:attributes="href block/href;title block/title" tal:content="block/title">block title</a></h2>
+       <img tal:attributes="src block/icon"/>
+       <h2 tal:content="block/title">block title</h2>
        <p tal:content="structure block/description"></p>
     </div>
    </div>
@@ -78,11 +78,9 @@
 </div>
 
 <script type="text/javascript">
-$('body').imagesLoaded(function(){
 $(".slidetabs").tabs(".images > div", {effect: 'fade',fadeOutSpeed: "fast",rotate: true}).slideshow();
 $(".scrollable").scrollable({circular:true}).autoscroll({interval:3000});
-$(".blockhomebas").equalHeights();
-});
+/*$(".blockhomebas").equalHeights();*/
 </script>
 </div>
 </body>
