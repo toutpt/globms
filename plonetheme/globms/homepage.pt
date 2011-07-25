@@ -79,7 +79,7 @@
 
 <script type="text/javascript">
 $(".slidetabs").tabs(".images > div", {effect: 'fade',fadeOutSpeed: "fast",rotate: true}).slideshow();
-$(".scrollable").scrollable({circular:true}).autoscroll({interval:3000});
+$(".scrollable").scrollable({circular:true}).autoscroll({interval:6000});
 /*$(".blockhomebas").equalHeights();*/
 </script>
 </div>
