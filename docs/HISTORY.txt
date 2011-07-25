@@ -1,7 +1,21 @@
 Changelog
 =========
 
-1.0devdev (unreleased)
-----------------------
+1.2 unreleased
+--------------
 
-- Initial release
+- change slideshow speed from 400 to 1000 to make it slower
+
+
+1.1 2011-07-25
+--------------
+
+- change slideshow intervall to 6000
+- add todo.txt to track requirements with dates
+- add favicon.ico
+- add apache enabled site zope-globms.terresnouvelles.com
+
+1.0
+---
+
+- initial release
