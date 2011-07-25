@@ -20,10 +20,16 @@ bandeau-home.png pour la home page
 Retour de congé le Mon, 25 Jul 2011
 -----------------------------------
 
-* Add favicon.ico
-* Re link /en with /fr
-* add folders for all languages
-* add area of interest in contact form (need translations)
-* change slideshow intervall to 6000
+[DONE] - Add favicon.ico
+[DONE] - change slideshow intervall to 6000
 
+[DONE] * Re link /en with /fr
+[DONE] * add folders for all languages
+[DONE] * add area of interest in contact form (need translations)
+[DONE] * remove section view from folder content type
+[DONE] * add apache enabled site zope-globms.terresnouvelles.com
 
+[DONE] * HOME PAGE: diapo ralentir la vitesse de transition (idem pour partenaire)
+* HOME PAGE:a > img: retiré le tiret bas (page they trust us)
+* HOME PAGE:livesearch -> passe sous le diapo
+* HOME PAGE: remplacer le lien login par intranet
