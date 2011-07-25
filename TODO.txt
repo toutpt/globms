@@ -1,0 +1,29 @@
+2011-07-05
+==========
+
+Retour du client le  Mon, 4 Jul 2011
+------------------------------------
+
+1.       Il faudrait équilibrer les différentes sections afin d’éviter le vite après Contact us
+[DONE] 2.       Pouvez-vous prévoir un retour à la ligne pour les liens vers linked in et bobsguide ?
+[DONE] 3.       De plus, voici les liens à utiliser : Linked in : http://www.linkedin.com/company/global-market-solutions-sas
+ 		Pour bobsguide : http://www.bobsguide.com/guide/vend/global-market-solutions.html
+
+[DONE] 4.       Remplacer ‘On the web’ par ‘Global Market Solutions on the web’
+[DONE] 5.       Pouvez-vous afficher le texte en mode ‘Justifier’ notamment sur la home page ?
+[DONE] 6.       Remplacer ‘The Compagny’ par ‘The Company’
+[DONE] 7.       Remplacer ‘Financial Software Technologie’ par ‘Define, Implement, Succeed’
+
+bandeau-home.png pour la home page
+
+
+Retour de congé le Mon, 25 Jul 2011
+-----------------------------------
+
+* Add favicon.ico
+* Re link /en with /fr
+* add folders for all languages
+* add area of interest in contact form (need translations)
+* change slideshow intervall to 6000
+
+
