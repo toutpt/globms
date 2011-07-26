@@ -578,13 +578,11 @@ dl.portlet {
 #content a:link,
 dl.portlet a:link {
     color: #3b3b3c;
-    border-bottom: 0.1em solid #ccc;
 }
 
 #content a:visited,
 dl.portlet a:visited {
     color: #3b3b3c;
-    border-bottom: 0.1em solid #ccc;
 }
 #content a:hover,
 dl.portlet a:hover {
@@ -593,6 +591,7 @@ dl.portlet a:hover {
 #content a:target {
     background-color: #ffb;
 }
+
 #content span.link-external a {
     background: transparent url(link_icon.png) 0px 1px no-repeat;
     padding: 1px 0px 1px 16px;
