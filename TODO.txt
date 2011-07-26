@@ -30,6 +30,6 @@ Retour de congé le Mon, 25 Jul 2011
 [DONE] * add apache enabled site zope-globms.terresnouvelles.com
 
 [DONE] * HOME PAGE: diapo ralentir la vitesse de transition (idem pour partenaire)
-* HOME PAGE:a > img: retiré le tiret bas (page they trust us)
-* HOME PAGE:livesearch -> passe sous le diapo
+[DONE] * HOME PAGE: a > img: retiré le tiret bas (page they trust us)
+[DONE] * HOME PAGE: livesearch -> passe sous le diapo
 * HOME PAGE: remplacer le lien login par intranet
