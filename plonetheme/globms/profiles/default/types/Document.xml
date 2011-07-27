@@ -2,5 +2,6 @@
 <object name="Document">
  <property name="view_methods" purge="False">
   <element value="section_view"/>
+  <element value="job_view"/>
  </property>
 </object>
