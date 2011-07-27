@@ -1,7 +1,13 @@
 Changelog
 =========
 
-1.2 unreleased
+1.3 unreleased
+--------------
+
+- add job_view
+
+
+1.2 2011-07-26
 --------------
 
 - change slideshow speed from 400 to 1000 to make it slower
