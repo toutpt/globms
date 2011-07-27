@@ -5,6 +5,7 @@ Changelog
 --------------
 
 - add job_view
+- update default profile to add job_view on document content type
 
 
 1.2 2011-07-26

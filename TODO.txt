@@ -29,7 +29,9 @@ Retour de congé le Mon, 25 Jul 2011
 [DONE] * remove section view from folder content type
 [DONE] * add apache enabled site zope-globms.terresnouvelles.com
 
+Livré le 26 07 2011
 [DONE] * HOME PAGE: diapo ralentir la vitesse de transition (idem pour partenaire)
 [DONE] * HOME PAGE: a > img: retiré le tiret bas (page they trust us)
 [DONE] * HOME PAGE: livesearch -> passe sous le diapo
+
 * HOME PAGE: remplacer le lien login par intranet
