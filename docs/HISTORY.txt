@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.4 unreleased
+--------------
+
+- add link to terresnouvelles in the footer
+
 1.3 2011-07-27
 --------------
 
