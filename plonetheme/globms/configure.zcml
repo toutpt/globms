@@ -114,5 +114,25 @@
      permission="zope2.View"
      layer=".interfaces.IGlobMSLayer"
      />
-
+   <browser:page
+     name="intranet_view"
+     for="*"
+     menu="plone_displayviews"
+     title="Intranet"
+     class=".intranet_view.Intranet"
+     template="intranet_view.pt"
+     permission="zope2.View"
+     layer=".interfaces.IGlobMSLayer"
+     />
+   <browser:page
+     name="extranet_view"
+     for="*"
+     menu="plone_displayviews"
+     title="Extranet"
+     class=".extranet_view.Extranet"
+     template="extranet_view.pt"
+     permission="zope2.View"
+     layer=".interfaces.IGlobMSLayer"
+     />
+  <adapter factory=".fix_location.location"                name="location" />
 </configure>

@@ -1,10 +1,13 @@
 Changelog
 =========
 
-1.4 unreleased
+1.4 2011-08-02
 --------------
 
 - add link to terresnouvelles in the footer
+- CONTENT: fix advanced search form by delete old Blocks instance: /en/global-market-solutions/legal-notice/blocks.2011-06-21.4314404792/delete_confirmation
+- add intranet_view and extranet_view
+- CONTENT: application form -> contact@globms.com
 
 1.3 2011-07-27
 --------------

@@ -10,5 +10,12 @@
     destination="120"
     handler=".v120.upgrade"
     profile="plonetheme.globms:default"/>
+  <gs:upgradeStep
+    title="Upgrade 120-130"
+    description=""
+    source="120"
+    destination="130"
+    handler=".v130.upgrade"
+    profile="plonetheme.globms:default"/>
 
 </configure>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <metadata>
-  <version>120</version>
+  <version>130</version>
   <dependencies>
     <dependency>profile-Products.PloneFormGen:default</dependency>
     <dependency>profile-plone.app.theming:default</dependency>

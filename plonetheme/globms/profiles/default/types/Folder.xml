@@ -2,5 +2,7 @@
 <object name="Folder">
  <property name="view_methods" purge="False">
   <element value="homepage"/>
+  <element value="intranet_view"/>
+  <element value="extranet_view"/>
  </property>
 </object>

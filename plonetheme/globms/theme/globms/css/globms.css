@@ -2429,3 +2429,40 @@ http://flowplayer.org/tools/demos/scrollable/index.html
 .container_12,body.popup,#header,#gbmscontent,#footer,#footercolumns,#gbmscolumn,#gbmscontentwrapper{
     background-color:#fff
 }
+
+/* end home page */
+/* @group intranet */
+
+.intranet-item{
+	background-color: #ececec;
+	padding:10px;
+	margin-bottom:2px;
+}
+#intranet-project p,
+#intranet-news p{
+	margin-bottom:0; 
+}
+#intranet-project{
+    background: 0 13px url('../images/icon_project.png') no-repeat;
+}
+#intranet-news{
+    background: 0 13px url('../images/icon_news.png') no-repeat;
+}
+#intranet-project h1,
+#intranet-news h1{
+    padding-left:40px;
+    padding-bottom:15px;
+    margin-bottom:5px;
+}
+#intranet-project h1{
+	background: center bottom url('../images/trait0.png') repeat-x;
+}
+#intranet-news h1{
+	background: center bottom url('../images/trait1.png') repeat-x;
+}
+.intranet-item a{
+	text-decoration:underline;
+}
+.intranet-item .title{
+	font-weight: bold;
+/* end @group intranet */

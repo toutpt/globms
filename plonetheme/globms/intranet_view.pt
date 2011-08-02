@@ -1,0 +1,28 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plonetheme.globms">
+<body>
+<div metal:fill-slot="main">
+  <div class="grid_6 alpha" id="intranet-news">
+    <h1>News</h1>
+    <div>
+    </div>
+  </div>
+  <div class="grid_6 omega" id="intranet-project">
+    <h1>Project</h1>
+    <div>
+      <div class="intranet-item" tal:repeat="item view/projects">
+        <p class="title" tal:content="item/Title">Title</p>
+        <p tal:content="item/Description">Description of the item</p>
+        <p tal:condition="python:item.portal_type == 'File'"><a tal:attributes="href string:${item/absolute_url}/@@download" class="contenttype-file">Download</a></p>
+        <p tal:condition="python:item.portal_type == 'Folder'"><a tal:attributes="href string:${item/absolute_url}" class="contenttype-folder">Explore</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
