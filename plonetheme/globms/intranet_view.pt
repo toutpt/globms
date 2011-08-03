@@ -19,9 +19,9 @@
    <div id="intranet-files">
     <h1>Last modified files</h1>
     <div class="intranet-item" tal:repeat="item view/files">
-        <p class="title" tal:content="item/Title">Title</p>
-        <p tal:content="item/Description">Description of the item</p>
-        <p><img tal:attributes="src item/getIcon"/><a tal:attributes="href string:${item/absolute_url}" class="contenttype-file">Download</a></p>
+        <p class="title" tal:content="item/title">Title</p>
+        <p tal:content="item/description">Description of the item</p>
+        <p><img tal:attributes="src item/icon"/><a tal:attributes="href string:${item/url}" class="contenttype-file">Download</a></p>
     </div>
    </div>
   </div>

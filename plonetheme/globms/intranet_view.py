@@ -23,8 +23,19 @@ class Intranet(BrowserView):
         return self.context.listFolderContents(contentFilter=filter)
 
     def files(self):
-        filter = {'portal_type':'File'}
-        return self.context.listFolderContents(contentFilter=filter)
+        path = '/'.join(self.context.getPhysicalPath())
+        query = {'portal_type':'File', 'sort_on':'Date','sort_order':'reverse',
+                 'path':{'query': path}}
+        catalog = self.tools.catalog()
+        brains = catalog(**query)
+        files = []
+        for brain in brains:
+            files.append({'title':brain.Title,
+                'description':brain.Description,
+                'url':brain.getURL(),
+                'icon':brain.getIcon})
+
+        return files
 
     @property
     def tools(self):
