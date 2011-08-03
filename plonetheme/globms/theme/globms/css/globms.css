@@ -2449,6 +2449,7 @@ http://flowplayer.org/tools/demos/scrollable/index.html
     background: 0 13px url('../images/icon_news.png') no-repeat;
 }
 #intranet-project h1,
+#intranet-files h1,
 #intranet-news h1{
     padding-left:40px;
     padding-bottom:15px;
@@ -2457,7 +2458,8 @@ http://flowplayer.org/tools/demos/scrollable/index.html
 #intranet-project h1{
 	background: center bottom url('../images/trait0.png') repeat-x;
 }
-#intranet-news h1{
+#intranet-news h1,
+#intranet-files h1{
 	background: center bottom url('../images/trait1.png') repeat-x;
 }
 .intranet-item a{
