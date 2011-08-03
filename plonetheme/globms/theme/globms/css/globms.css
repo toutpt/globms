@@ -2314,7 +2314,7 @@ div.homecenterb h2 a{
 }
 .homecenterb img{
     float:left;
-    margin: 0 10px 0 10px;
+    margin: 0 10px 0 0;
 }
 
 #homecenterb0 h2{background: url('../images/trait0.png') no-repeat;}
