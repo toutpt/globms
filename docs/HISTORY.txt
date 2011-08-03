@@ -5,6 +5,7 @@ Changelog
 --------------
 
 - HOMEPAGE: Minify icon
+- INTRANET: Improve getters of files and news
 
 1.4 2011-08-02
 --------------
