@@ -8,15 +8,22 @@ class Intranet(BrowserView):
         self.request = request
 
     def news(self):
+        news = []
         query = {'portal_type':'News Item'}
-        catalog = tools.catalog()
+        catalog = self.tools.catalog()
         brains = catalog(**query)
-        return {'title':brain.Title,
+        for brain in brains:
+            news.append({'title':brain.Title,
                 'description':brain.Description,
-                'url':brain.getURL()}
+                'url':brain.getURL()})
+        return news
     
-    def projects(self):
-        filter = {'portal_types':['File','Folder']}
+    def folders(self):
+        filter = {'portal_type':'Folder'}
+        return self.context.listFolderContents(contentFilter=filter)
+
+    def files(self):
+        filter = {'portal_type':'File'}
         return self.context.listFolderContents(contentFilter=filter)
 
     @property
