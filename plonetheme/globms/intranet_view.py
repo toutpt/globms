@@ -9,7 +9,8 @@ class Intranet(BrowserView):
 
     def news(self):
         news = []
-        query = {'portal_type':'News Item'}
+        query = {'portal_type':'News Item', 'sort_order':'Effective',
+                 'sort_limit':2}
         catalog = self.tools.catalog()
         brains = catalog(**query)
         for brain in brains:
@@ -25,7 +26,7 @@ class Intranet(BrowserView):
     def files(self):
         path = '/'.join(self.context.getPhysicalPath())
         query = {'portal_type':'File', 'sort_on':'Date','sort_order':'reverse',
-                 'path':{'query': path}}
+                 'path':{'query': path},'sort_limit':5}
         catalog = self.tools.catalog()
         brains = catalog(**query)
         files = []
