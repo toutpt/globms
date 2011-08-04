@@ -9,6 +9,7 @@ class SlideshowViewlet(common.ViewletBase):
     """Viewlet for slideshow on many pages"""
 
     def is_home(self):
+        if self.context.portal_type == 'Plone Site':return False
         return INavigationRoot.providedBy(self.context)
 
     def bandeau(self):
@@ -21,7 +22,10 @@ class SlideshowViewlet(common.ViewletBase):
         if context_state.is_default_page():
             context = context_state.parent()
 
-        if 'bandeau.png' in context.objectIds():
+        #special case for intranet extranet:
+        path = self.context.getPhysicalPath()
+
+        if 'bandeau.png' in context.objectIds() or 'intranet' in path or 'extranet' in path:
             return {'src':context.absolute_url()+'/bandeau.png',
                     'alt':context.Title()}
 

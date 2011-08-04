@@ -228,7 +228,7 @@ a.hasDropDown {
   background-color:#205C90;
   }
 
-
+#intranet-links a,
 #portal-personaltools a{
     font-size: 15px;
     color: #6c9a00;
@@ -259,7 +259,7 @@ a.hasDropDown {
 }
 #langselector{
     font-size: 11px;
-    width:300px;
+    width:380px;
 }
 #langselector img{
     padding-right:5px;
@@ -2448,6 +2448,9 @@ http://flowplayer.org/tools/demos/scrollable/index.html
 #intranet-news{
     background: 0 13px url('../images/icon_news.png') no-repeat;
 }
+#intranet-files{
+    background: 0 13px url('../images/icon_files.jpg') no-repeat;
+}
 #intranet-project h1,
 #intranet-files h1,
 #intranet-news h1{
@@ -2467,4 +2470,9 @@ http://flowplayer.org/tools/demos/scrollable/index.html
 }
 .intranet-item .title{
 	font-weight: bold;
+}
+#intranet-links{
+	float:right;
+	margin:15px 0 15px 0;
+}
 /* end @group intranet */

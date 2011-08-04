@@ -1,7 +1,4 @@
-from Products.Five import BrowserView
+from plonetheme.globms import intranet_view
 
-class Extranet(BrowserView):
+class Extranet(intranet_view.Intranet):
     """Intranet view"""
-    def __init__(self, context, request):
-        self.context = context
-        self.request = request

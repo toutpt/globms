@@ -17,7 +17,7 @@
     </div>
    </div>
    <div id="intranet-files">
-    <h1>Last modified files</h1>
+    <h1>Files</h1>
     <div class="intranet-item" tal:repeat="item view/files">
         <p class="title" tal:content="item/title">Title</p>
         <p tal:content="item/description">Description of the item</p>

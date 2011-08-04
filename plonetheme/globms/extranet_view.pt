@@ -7,15 +7,52 @@
       i18n:domain="plonetheme.globms">
 <body>
 <div metal:fill-slot="main">
-<div class="grid_6">
+  <div class="grid_6 alpha">
+   <div id="intranet-search">
+    <h1>Search</h1>
+    <div class="extranet-search">
+        <p class="title grid_3 alpha">Documentation Guide:</p>
+        <div id="extranet-searchbox">
+           <form name="searchform" tal:attributes="action string:${view/context/absolute_url}/search">
 
-News
+            <div class="LSBox">
+              <input name="path" type="hidden" tal:attributes="value python:'/'.join(here.getPhysicalPath());"/>
+              <input name="SearchableText" type="text" size="18" title="Search Site" class="searchField inputLabel inputLabelActive" autocomplete="off"/><input class="searchButton" type="submit" value="Search"/>
+            </div>  
+           </form>
 
-</div>
 
-<div class="grid_6">
-Project
-</div
+        </div>
+    </div>
+   </div>
+   <div id="intranet-news">
+    <h1>News</h1>
+    <div class="intranet-item" tal:repeat="item view/news">
+        <p class="title" tal:content="item/title">Title</p>
+        <p tal:content="item/description">Description of the item</p>
+        <p><a tal:attributes="href string:${item/url}" class="contenttype-news-item">Read</a></p>
+    </div>
+   </div>
+  </div>
+  <div class="grid_6 omega">
+   <div id="intranet-files">
+    <h1>Files</h1>
+    <div class="intranet-item" tal:repeat="item view/files">
+        <p class="title" tal:content="item/title">Title</p>
+        <p tal:content="item/description">Description of the item</p>
+        <p><img tal:attributes="src item/icon"/><a tal:attributes="href string:${item/url}" class="contenttype-file">Download</a></p>
+    </div>
+   </div>
+   <div id="intranet-project">
+    <h1>Project</h1>
+      <div class="intranet-item" tal:repeat="item view/folders">
+        <p class="title" tal:content="item/Title">Title</p>
+        <p tal:content="item/Description">Description of the item</p>
+        <p><a tal:attributes="href string:${item/absolute_url}" class="contenttype-folder">Explore</a></p>
+      </div>
+   </div>
+
+  </div>
 </div>
 </body>
 </html>
