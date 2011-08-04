@@ -50,5 +50,6 @@
 
 
 <!--  footer -->
+    <append css:content-children="#footer" css:theme="#footer" />
     <append css:content-children="#footercolumns" css:theme="#footercolumns" />
 </rules>
