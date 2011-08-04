@@ -50,7 +50,11 @@ class SlideshowViewlet(common.ViewletBase):
         brains = catalog(**query)
         if brains:
             news = brains[0]
-            return {'title':news.Title,
+            news_ob = news.getObject()
+            info = {'title':news.Title,
                     'description':news.Description,
                     'image':news.getURL()+'/image_mini',
                     'url':news.getURL()}
+            if not news_ob.getImage():
+                info['image']=False
+            return info

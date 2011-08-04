@@ -1,6 +1,14 @@
 Changelog
 =========
 
+1.6 unreleased
+--------------
+
+- BUG: fix image_view_fullscreen issue: make it redirect to /
+- CONTENT: set images to sections of our services
+- Footer: move it from theme to content with legal notice
+- HOME PAGE: make the image news alternative
+
 1.5 2011-08-03
 --------------
 

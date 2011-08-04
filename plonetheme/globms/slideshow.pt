@@ -6,7 +6,7 @@
     <div id="home-news" tal:define="news view/home_news" tal:condition="news">
         <h2><a tal:attributes="href news/url;" tal:content="news/title">News Title</a></h2>
         <p tal:content="news/description">Description</p>
-        <p><a tal:attributes="href news/url;"><img tal:attributes="src news/image" alt="news image"/></a></p>
+        <p tal:condition="news/image"><a tal:attributes="href news/url;"><img tal:attributes="src news/image" alt="news image"/></a></p>
     </div>
     <div class="scrollable" id="bandeau-home">
        <div class="items">
