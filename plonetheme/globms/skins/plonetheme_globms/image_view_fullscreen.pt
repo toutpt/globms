@@ -1,0 +1,1 @@
+<tal:redir define="dummy python:request.response.redirect(here.absolute_url())"></tal:redir>
