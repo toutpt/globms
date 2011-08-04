@@ -1,13 +1,15 @@
 Changelog
 =========
 
-1.6 unreleased
+1.6 2011-08-04
 --------------
 
 - BUG: fix image_view_fullscreen issue: make it redirect to /
 - CONTENT: set images to sections of our services
 - Footer: move it from theme to content with legal notice
 - HOME PAGE: make the image news alternative
+- intranet: add intranet view with search widget
+- intranet: add bandeau.png for both
 
 1.5 2011-08-03
 --------------
