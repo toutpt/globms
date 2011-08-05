@@ -2,10 +2,10 @@
      i18n:domain="plone">
 <div id="intranet-links">
     <a id="extranet"
-       tal:attributes="href string:${view/navigation_root_url}/extranet">Extranet</a>
+       tal:attributes="href string:${view/extranet_url}">Extranet</a>
     &nbsp;&nbsp;&nbsp;
     <a id="intranet"
-       tal:attributes="href string:${view/navigation_root_url}/intranet">Intranet</a>
+       tal:attributes="href string:${view/intranet_url}">Intranet</a>
 </div>
 
 <dl class="actionMenu deactivated" id="portal-personaltools"

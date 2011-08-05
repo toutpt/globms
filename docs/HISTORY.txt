@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.7 2011-08-05
+--------------
+
+- force intranet and extranet links to point into /en
+
 1.6 2011-08-04
 --------------
 
