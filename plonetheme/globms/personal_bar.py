@@ -7,7 +7,7 @@ class PersonalBarViewlet(common.PersonalBarViewlet):
     
     def extranet_url(self):
         portal_url = self.portal_state.portal_url()
-        return portal_url + '/en/intranet'
+        return portal_url + '/en/extranet'
 
     def intranet_url(self):
         portal_url = self.portal_state.portal_url()
