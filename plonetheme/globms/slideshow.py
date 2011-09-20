@@ -50,7 +50,8 @@ class SlideshowViewlet(common.ViewletBase):
         query = {'portal_type':'News Item',
                  'sort_on':'effective',
                  'sort_order':'reverse',
-                 'limit':1}
+                 'limit':1,
+                 'Language':'en'}
         brains = catalog(**query)
         if brains:
             news = brains[0]

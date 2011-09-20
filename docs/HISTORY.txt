@@ -1,10 +1,16 @@
 Changelog
 =========
 
+1.8 unreleased
+--------------
+
+- force lang to 'en' in home slideshow news
+
 1.7 2011-08-05
 --------------
 
 - force intranet and extranet links to point into /en
+- update buildout to RO for specific addons sources
 
 1.6 2011-08-04
 --------------
