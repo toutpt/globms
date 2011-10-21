@@ -142,7 +142,6 @@ q {
     z-index: 3; /* personaltools should be above #portal-header (with z-index: 2) */
     top: 0;
     right: 0;
-    padding: 15px;
     border-bottom-right-radius: 0.5em;
     border-bottom-left-radius: 0.5em;
     -webkit-border-bottom-right-radius: 0.5em;
@@ -228,10 +227,13 @@ a.hasDropDown {
   background-color:#205C90;
   }
 
-#intranet-links a,
-#portal-personaltools a{
+#intranet-links a{
     font-size: 15px;
     color: #6c9a00;
+}
+,
+#portal-personaltools a{
+	font-size: 8px;
 }
 #portal-personaltools #anon-personalbar a {
     float: left;
