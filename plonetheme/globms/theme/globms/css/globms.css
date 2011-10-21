@@ -2286,7 +2286,7 @@ ul.navigation li.selected a,
 ul.navigation li.active a {
 	color: #75ad0a;
 }
-body.plonesite #portal-globalnav{
+body.portaltype-plone-site #portal-globalnav{
 	display: none;
 }
 #portaltab-contact a,
