@@ -13,6 +13,7 @@
   <include package="Products.LinguaPlone"/>
   <include package="five.globalrequest" />
   <include package=".upgrades"/>
+  <include package=".pwresetform"/>
 
   <five:registerPackage package="." initialize=".initialize" />
 
@@ -40,7 +41,7 @@
      name="plone.footer"
      for="*"
      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-     class="plone.app.layout.viewlets.common.FooterViewlet"
+     class=".footer.FooterViewlet"
      permission="zope.Public"
      template="footer.pt"
      layer=".interfaces.IGlobMSLayer"
