@@ -30,9 +30,13 @@ class SlideshowViewlet(common.ViewletBase):
                     'alt':context.Title()}
 
     def slides(self):
+        portal_state = component.getMultiAdapter((self.context, self.request),
+                                         name=u'plone_portal_state')
         sections = self.context.objectIds()
         catalog = self.context.portal_catalog
-        brains = catalog(portal_type="Image", getId="bandeau-home.png")
+        brains = catalog(portal_type="Image",
+                         getId="bandeau-home.png",
+                         Language=portal_state.language())
         slides = []
         for brain in brains:
             if brain.exclude_from_nav:
