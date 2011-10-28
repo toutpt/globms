@@ -1,9 +1,14 @@
 Changelog
 =========
 
-1.8 unreleased
+2.0 2011-10-28
 --------------
 
+- remove globalnav if we are on plonesite
+- add a dont do this on copy paste from one lang to the other
+- override login_form to works with navigationroot
+- use visualportal wrapper condition in theme
+- move personaltools into footer
 - force lang to 'en' in home slideshow news
 
 1.7 2011-08-05
