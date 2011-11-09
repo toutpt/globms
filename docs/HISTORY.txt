@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2.1 2011-11-09
+--------------
+
+- add project.js to remove link in RSS portlet
+
 2.0 2011-10-28
 --------------
 
