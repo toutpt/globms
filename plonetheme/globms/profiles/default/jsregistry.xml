@@ -10,5 +10,7 @@
  <javascript 
     id="++theme++plonetheme.globms/js/jquery.imagesloaded.js"
     enabled="True"/>
-
+ <javascript
+    id="++theme++plonetheme.globms/js/project.js"
+    enabled="True"/>
 </object>
