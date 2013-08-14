@@ -26,11 +26,11 @@ setup(name='plonetheme.globms',
       install_requires=[
           'setuptools',
           'plone.app.theming',
-          'Products.LinguaPlone',
           'webcouturier.dropdownmenu',
           'Products.PloneFormGen',
           'collective.seo',
           'collective.googleanalytics',
+          'collective.galleria',
            # -*- Extra requirements: -*-
       ],
       entry_points="""
