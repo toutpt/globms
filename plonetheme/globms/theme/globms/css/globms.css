@@ -233,7 +233,7 @@ a.hasDropDown {
 }
 ,
 #portal-personaltools a{
-	font-size: 8px;
+  font-size: 8px;
 }
 #portal-personaltools #anon-personalbar a {
     float: left;
@@ -2237,7 +2237,7 @@ div.overlay .formControls a {
     text-align: right;
 }
 #langselector .currentLanguage a{
-	text-decoration:underline;
+  text-decoration:underline;
 }
 
 #globms-links{
@@ -2258,7 +2258,7 @@ div.overlay .formControls a {
 /* MAIN NAVIGATION */
 #nav-bar-wrapper{background-color:#fff;}
 #globalnav-wrapper{
-	background: url(../images/nav_bg.png) repeat-x left bottom;
+  background: url(../images/nav_bg.png) repeat-x left bottom;
     clear: both;
     border-top: 1px solid #dedede;
     border-right: 1px solid #dedede;
@@ -2273,26 +2273,26 @@ div.overlay .formControls a {
 /* #portal-globalnav li{line-height: 3em;} */
 
 ul.navigation li a,ul.navigation li a:visited {
-	padding: 10px 20px 10px 20px;
-	color: #606060;
-	font-weight: bold;
-	border-right: 1px solid #c5c5c5;
-	white-space: nowrap;
+  padding: 10px 20px 10px 20px;
+  color: #606060;
+  font-weight: bold;
+  border-right: 1px solid #c5c5c5;
+  white-space: nowrap;
 }
 ul.navigation li a:hover {
-	color: #75ad0a;
+  color: #75ad0a;
 }
 ul.navigation li.selected a,
 ul.navigation li.active a {
-	color: #75ad0a;
+  color: #75ad0a;
 }
 body.portaltype-plone-site #portal-globalnav{
-	display: none;
+  display: none;
 }
 #portaltab-contact a,
 #portaltab-contactez-nous a,
 #portaltab-contact-us a{
-	border-right:none;
+  border-right:none;
 }
 
 /* HOME PAGE */
@@ -2380,15 +2380,15 @@ http://flowplayer.org/tools/demos/scrollable/index.html
     height:110px;
 }
 #bandeau-home{
-	width:700px;
-	height:269px;
+  width:700px;
+  height:269px;
 }
 #home-news{
-	float:right;
-	width:240px;
+  float:right;
+  width:240px;
 }
 #home-news h2 a{
-	color: white;
+  color: white;
 }
 #home-news p{
     padding-top:5px;
@@ -2396,7 +2396,7 @@ http://flowplayer.org/tools/demos/scrollable/index.html
 }
 
 .scrollable{
-	position:relative;
+  position:relative;
     overflow:hidden;
     height:auto;
 }
@@ -2409,15 +2409,15 @@ http://flowplayer.org/tools/demos/scrollable/index.html
 }
 /* section */
 .section-icon{
-	float:left;
+  float:left;
 }
 .section-view h1{
-	height: 50px;
-	padding-top: 15px;
-	padding-left: 80px;
+  height: 50px;
+  padding-top: 15px;
+  padding-left: 80px;
 }
 .section-view #content-core{
-	padding-top: 20px;
+  padding-top: 20px;
 }
 #section-project-management h1{
     background: center bottom url('../images/trait0.png') repeat-x;
@@ -2439,13 +2439,13 @@ http://flowplayer.org/tools/demos/scrollable/index.html
 /* @group intranet */
 
 .intranet-item{
-	background-color: #ececec;
-	padding:10px;
-	margin-bottom:2px;
+  background-color: #ececec;
+  padding:10px;
+  margin-bottom:2px;
 }
 #intranet-project p,
 #intranet-news p{
-	margin-bottom:0; 
+  margin-bottom:0; 
 }
 #intranet-project{
     background: 0 13px url('../images/icon_project.png') no-repeat;
@@ -2464,20 +2464,94 @@ http://flowplayer.org/tools/demos/scrollable/index.html
     margin-bottom:5px;
 }
 #intranet-project h1{
-	background: center bottom url('../images/trait0.png') repeat-x;
+  background: center bottom url('../images/trait0.png') repeat-x;
 }
 #intranet-news h1,
 #intranet-files h1{
-	background: center bottom url('../images/trait1.png') repeat-x;
+  background: center bottom url('../images/trait1.png') repeat-x;
 }
 .intranet-item a{
-	text-decoration:underline;
+  text-decoration:underline;
 }
 .intranet-item .title{
-	font-weight: bold;
+  font-weight: bold;
 }
 #intranet-links{
-	float:right;
-	margin:15px 0 15px 0;
+  float:right;
+  margin:15px 0 15px 0;
 }
 /* end @group intranet */
+
+/* Iris Theme */
+#header{
+  position:relative;
+  height:120px;
+}
+#logo,#personnaltools{
+  position:absolute;
+  bottom:0px;
+}
+#logo{
+  left:20px; 
+  margin:1.2em 0;
+}
+#personnaltools{
+  right:0px;
+}
+/* Iris Search Box */
+input.inputLabel,
+input.inputLabels:focus,
+input.searchButton{
+  padding:2px 5px;
+  background:transparent;
+  border:1px solid #5e5e5e;
+  outline:none;
+
+  border-radius:10px;
+  -o-border-radius:10px;
+  -ms-border-radius:10px;
+  -moz-border-radius:10px;
+  -webkit-border-radius:10px;
+}
+input.inputLabel{
+  background:transparent url('../images/icon-search.png') 3px 3px no-repeat;
+  padding-left:20px; 
+}
+input.searchButton{
+  margin-left:1px;
+}
+#home-news h2{
+  margin-top:10px;
+}
+#home-news p:last-child{
+  text-align:center;
+}
+/* Iris Content */
+.template-homepage .block{
+  background:#f4f4f4;
+  padding:5px;
+  height:200px;
+}
+.template-homepage #content .block p{
+  margin:0px;
+}
+.template-homepage .contact{
+  height:100px;
+  margin-bottom:10px; 
+  background:#f4f4f4 url('../images/contact.png') 24px 5px no-repeat;
+}
+.template-homepage .support{
+  height:100px;
+  background:#d0dae2 url('../images/support.png') 24px 5px no-repeat;
+}
+.template-homepage .contact,
+.template-homepage .support{
+  text-align:center;
+  position:relative;
+}
+.template-homepage .contact h3,
+.template-homepage .support h3{
+  position:absolute;
+  bottom:5px;
+  left:24px;
+}

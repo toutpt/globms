@@ -10,7 +10,6 @@
 
   <include package="plone.app.contentmenu" />
   <include package="Products.CMFPlone"/>
-  <include package="Products.LinguaPlone"/>
   <include package="five.globalrequest" />
   <include package=".upgrades"/>
   <include package=".pwresetform"/>
@@ -28,15 +27,7 @@
       description='Install Global Market Solution'
       provides="Products.GenericSetup.interfaces.EXTENSION"
   />
-   <browser:viewlet
-     name="plone.app.i18n.locales.languageselector"
-     for="*"
-     manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-     class="Products.LinguaPlone.browser.selector.TranslatableLanguageSelector"
-     permission="zope2.View"
-     template="langselector.pt"
-     layer=".interfaces.IGlobMSLayer"
-     />
+
    <browser:viewlet
      name="plone.footer"
      for="*"

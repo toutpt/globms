@@ -1,4 +1,4 @@
-from Products.LinguaPlone.interfaces import ILinguaPloneProductLayer
+from zope import interface
 
-class IGlobMSLayer(ILinguaPloneProductLayer):
+class IGlobMSLayer(interface.Interface):
     """Global Market solution browser layer"""

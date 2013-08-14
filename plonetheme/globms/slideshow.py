@@ -9,7 +9,7 @@ class SlideshowViewlet(common.ViewletBase):
     """Viewlet for slideshow on many pages"""
 
     def is_home(self):
-        if self.context.portal_type == 'Plone Site':return False
+        if self.context.portal_type == 'Plone Site':return True
         return INavigationRoot.providedBy(self.context)
 
     def bandeau(self):
@@ -35,8 +35,7 @@ class SlideshowViewlet(common.ViewletBase):
         sections = self.context.objectIds()
         catalog = self.context.portal_catalog
         brains = catalog(portal_type="Image",
-                         getId="bandeau-home.png",
-                         Language=portal_state.language())
+                         getId="bandeau-home.png")
         slides = []
         for brain in brains:
             if brain.exclude_from_nav:
