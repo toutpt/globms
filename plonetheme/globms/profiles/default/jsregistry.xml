@@ -13,4 +13,5 @@
  <javascript
     id="++theme++plonetheme.globms/js/project.js"
     enabled="True"/>
+  <javascript id="++resource++collective.js.masonry/jquery.masonry.min.js" enabled="0"/>
 </object>

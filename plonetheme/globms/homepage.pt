@@ -9,31 +9,16 @@
 <div metal:fill-slot="main" class="container_12">
   <h1 id="pagetitle" class="grid_12 alpha omega hiddenStructure" tal:content="view/site_title"></h1>
   <div class="clear"></div>
-  <div class="grid_5 alpha block">
-    <h2>IRIS&copy; Software characteristic</h2>
-    <p>IRIS&copy; offers a complete solution covering all the Counterparty Credit Risk project streams and addresses weaknesses of existing CVA implementations.</p>
-    <p>IRIS&copy; key characteristics are : </p>
-    <p>$ Completeness</p>
-    <p>$ Performance</p>
-    <p>$ Integration capability</p>
-    <p>$ Transparency</p>
-    <p>$ Scalability</p>
-  </div>
-  <div class="grid_5 alpha omega block">
-    <h2>IRIS&copy; components</h2>
-    <p>IRIS&copy; is deliverable either as a full suite or by modules based on specific business requirements.</p>
-    <p>$ IRIS&copy; Data module</p>
-    <p>$ IRIS&copy; Pricing engine</p>
-    <p>$ IRIS&copy; Aggregation engine</p>
-    <p>$ IRIS&copy; Risk Measures engine</p>
-    <p>$ IRIS&copy; Front-End</p>
+  <div class="grid_10 alpha">
+            <div id="viewlet-below-content-body" tal:content="structure provider:plone.abovecontentbody" />
+            <div id="viewlet-below-content-body" tal:content="structure provider:plone.belowcontentbody" />
   </div>
   <div class="grid_2 omega">
     <div class="contact">
-      <h3>Contact us</h3>
+      <h3><a tal:attributes="href string:${context/absolute_url}/contact-us">Contact us</a></h3>
     </div>
     <div class="support">
-      <h3>Support</h3>
+      <h3><a tal:attributes="href string:${context/absolute_url}/support">Support</a></h3>
     </div>
   </div>
   <script type="text/javascript">

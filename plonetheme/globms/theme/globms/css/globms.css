@@ -2266,14 +2266,14 @@ div.overlay .formControls a {
     border-left: 1px solid #dedede;
     font-family: Arial, sans-serif;
     font-weight:bold;
-    font-size:13px;
+    font-size: 18px;
     -moz-border-radius: 5px;
     border-radius: 5px;
 }
 /* #portal-globalnav li{line-height: 3em;} */
 
 ul.navigation li a,ul.navigation li a:visited {
-  padding: 10px 20px 10px 20px;
+  padding: 10px 32px 10px 32px;
   color: #606060;
   font-weight: bold;
   border-right: 1px solid #c5c5c5;
@@ -2286,12 +2286,9 @@ ul.navigation li.selected a,
 ul.navigation li.active a {
   color: #75ad0a;
 }
-body.portaltype-plone-site #portal-globalnav{
-  display: none;
-}
-#portaltab-contact a,
-#portaltab-contactez-nous a,
-#portaltab-contact-us a{
+#portaltab-community a,
+#portaltab-community a,
+#portaltab-community a{
   border-right:none;
 }
 
@@ -2554,4 +2551,8 @@ input.searchButton{
   position:absolute;
   bottom:5px;
   left:24px;
+}
+.template-homepage .portletStaticText{
+  width: 50%;
+  float: left;
 }

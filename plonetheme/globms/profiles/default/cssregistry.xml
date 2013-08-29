@@ -8,4 +8,6 @@
  <stylesheet 
     id="public.css" 
      expression="not:request/HTTP_X_THEME_ENABLED | nothing" />
+
+ <stylesheet id="++resource++collective.masonry/masonry.css" enabled="0"/>
 </object>

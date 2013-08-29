@@ -8,11 +8,12 @@
     xmlns:i18n="http://namespaces.zope.org/i18n"
     i18n_domain="plonetheme.globms">
 
+  <includeDependencies package="."/>
   <include package="plone.app.contentmenu" />
   <include package="Products.CMFPlone"/>
   <include package="five.globalrequest" />
-  <include package=".upgrades"/>
   <include package=".pwresetform"/>
+  <include file="upgrades.zcml"/>
 
   <five:registerPackage package="." initialize=".initialize" />
 
