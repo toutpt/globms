@@ -2,7 +2,7 @@
   <div class="grid_12" id="footertext">
 <p>© 2011 GMS SAS. All rights reserved 2011 - Global Market Solutions - 29/31 Boulevard Charles Moretti - Station ALEXANDRE - 13014 Marseille +33 (0) 4 91 37 06 38</p>
 <p>For any questions please write to: contact@globms.com - For sales questions please contact : sales.fr@globms.com - HR contact: jobs.fr@globms.com</p>
-<p><a tal:attributes="href string:${view/site_url}/en/global-market-solutions/legal-notice">Legal Notice</a></p>
+<p><a tal:attributes="href string:${view/site_url}/legal-notice">Legal Notice</a></p>
 <dl class="actionMenu deactivated" id="portal-personaltools"
     tal:condition="python:view.user_actions and not view.anonymous">
 
