@@ -1,10 +1,12 @@
 <?xml version="1.0"?>
 <metadata>
-  <version>141</version>
+  <version>142</version>
   <dependencies>
     <dependency>profile-Products.PloneFormGen:default</dependency>
     <dependency>profile-plone.app.theming:default</dependency>
     <dependency>profile-collective.galleria:default</dependency>
     <dependency>profile-collective.masonry:default</dependency>
+    <dependency>profile-collective.oembed:default</dependency>
+    <dependency>profile-collective.portlet.oembed:default</dependency>
   </dependencies>
 </metadata>

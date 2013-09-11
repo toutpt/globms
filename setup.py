@@ -32,6 +32,8 @@ setup(name='plonetheme.globms',
           'collective.googleanalytics',
           'collective.galleria',
           'collective.masonry',
+          'collective.oembed',
+          'collective.portlet.oembed',
            # -*- Extra requirements: -*-
       ],
       entry_points="""

@@ -23,7 +23,7 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="plonetheme.globms default"
+      title="IRIS"
       directory="profiles/default"
       description='Install Global Market Solution'
       provides="Products.GenericSetup.interfaces.EXTENSION"
