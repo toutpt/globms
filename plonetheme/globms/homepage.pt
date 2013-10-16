@@ -6,7 +6,8 @@
       metal:use-macro="here/main_template/macros/master"
       i18n:domain="plonetheme.globms">
 <body>
-<div metal:fill-slot="main" class="container_12">
+<div metal:fill-slot="main" class="container_12"
+     tal:define="is_anonymous view/@@plone_portal_state/anonymous;">
   <h1 id="pagetitle" class="grid_12 alpha omega hiddenStructure" tal:content="view/site_title"></h1>
   <div class="clear"></div>
   <div class="grid_10 alpha">
@@ -17,8 +18,14 @@
     <div class="contact">
       <h3><a tal:attributes="href string:${context/absolute_url}/contact-us">Contact us</a></h3>
     </div>
-    <div class="support">
-      <h3><a tal:attributes="href string:${context/absolute_url}/support">Support</a></h3>
+    <div class="support"
+         tal:define="member context/@@plone_portal_state/member;
+                    member_id member/getId|nothing;
+                    has_support python:path('here/intranet/%s | nothing' % member_id)">
+      <h3><a tal:attributes="href string:${context/absolute_url}/intranet" tal:condition="is_anonymous">Support</a>
+          <a tal:attributes="href string:${context/absolute_url}/intranet/${member_id}" tal:condition="python: not(is_anonymous) and has_support">Support</a>
+          <a tal:attributes="href string:${context/absolute_url}/support" tal:condition="python: not(is_anonymous) and not(has_support)">Support</a>
+      </h3>
     </div>
   </div>
   <script type="text/javascript">
