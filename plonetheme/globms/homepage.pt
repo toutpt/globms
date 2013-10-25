@@ -24,7 +24,7 @@
                     has_support python:path('here/intranet/%s | nothing' % member_id)">
       <h3><a tal:attributes="href string:${context/absolute_url}/intranet" tal:condition="is_anonymous">Support</a>
           <a tal:attributes="href string:${context/absolute_url}/intranet/${member_id}" tal:condition="python: not(is_anonymous) and has_support">Support</a>
-          <a tal:attributes="href string:${context/absolute_url}/support" tal:condition="python: not(is_anonymous) and not(has_support)">Support</a>
+          <a tal:attributes="href string:${context/absolute_url}/intranet" tal:condition="python: not(is_anonymous) and not(has_support)">Support</a>
       </h3>
     </div>
   </div>

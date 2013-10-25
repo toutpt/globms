@@ -57,7 +57,7 @@
 
               <a class="plain" tal:attributes="href string:${portal_url}/intranet" tal:condition="is_anonymous">SUPPORT</a>
               <a class="plain" tal:attributes="href string:${portal_url}/intranet/${member_id}" tal:condition="python: not(is_anonymous) and has_support">SUPPORT</a>
-              <a class="plain" tal:attributes="href string:${portal_url}/support" tal:condition="python: not(is_anonymous) and not(has_support)">SUPPORT</a>
+              <a class="plain" tal:attributes="href string:${portal_url}/intranet" tal:condition="python: not(is_anonymous) and not(has_support)">SUPPORT</a>
             </li>
             </ul>
 
