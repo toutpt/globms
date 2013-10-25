@@ -1,0 +1,68 @@
+<tal:sections tal:define="portal_tabs view/portal_tabs;
+                          is_anonymous view/@@plone_portal_state/anonymous;
+                          portal_url context/@@plone_portal_state/portal_url;"
+     tal:condition="portal_tabs"
+     i18n:domain="plone">
+    <h5 class="hiddenStructure" i18n:translate="heading_sections">Sections</h5>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand hidden-desktop"
+         tal:attributes="href context/@@plone_portal_state/navigation_root_url"
+         tal:content="context/@@plone_portal_state/portal_title">
+        Site title
+      </a>
+      <div class="nav-collapse collapse">
+
+    <ul id="portal-globalnav"
+        class="nav"
+        tal:define="selected_tab python:view.selected_portal_tab"
+        ><tal:tabs tal:repeat="tab portal_tabs"
+        ><li class="dropdown"
+             tal:define="tid tab/id;
+                         subitems python:view.getTabObject(tabUrl = tab['url'], tabPath = tab.get('path'));
+                         item_clickable python:view.enable_parent_clickable or not subitems"
+                         tal:attributes="id string:portaltab-${tid};
+                                         class python:selected_tab==tid and 'dropdown active selected' or 'dropdown plain';">
+            <a href=""
+               tal:content="tab/name"
+               tal:attributes="href tab/url;
+                               title tab/description|nothing;
+                               class python:item_clickable and 'plain' or 'noClick'">
+                Tab Name
+            </a>
+            <tal:block tal:condition="subitems">
+                <ul class="submenu dropdown-menu"
+                    style="margin-top: 0px;">
+                    <tal:subitems tal:replace="structure subitems">
+                        <tal:comment replace="nothing">Submenu</tal:comment>
+                    </tal:subitems>
+                </ul>
+            </tal:block></li></tal:tabs>
+            
+            
+            <li tal:define="member context/@@plone_portal_state/member;
+                    member_id member/getId|nothing;
+                    po context/portal_url/getPortalObject | nothing;
+                    intra python:po.get('intranet', None);
+                    has_support python:intra and member_id in intra.keys() ;"
+                    tal:attributes="class python:selected_tab=='intranet' and 'selected' or 'plain'"
+                    >
+
+              <a tal:attributes="href string:${portal_url}/intranet" tal:condition="is_anonymous">SUPPORT</a>
+              <a tal:attributes="href string:${portal_url}/intranet/${member_id}" tal:condition="python: not(is_anonymous) and has_support">SUPPORT</a>
+              <a tal:attributes="href string:${portal_url}/support" tal:condition="python: not(is_anonymous) and not(has_support)">SUPPORT</a>
+            </li>
+            </ul>
+
+      </div>
+    </div>
+  </div>
+</nav>
+</tal:sections>
