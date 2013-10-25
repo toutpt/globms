@@ -47,17 +47,17 @@
             </tal:block></li></tal:tabs>
             
             
-            <li tal:define="member context/@@plone_portal_state/member;
+            <li id="portaltab-support" tal:define="member context/@@plone_portal_state/member;
                     member_id member/getId|nothing;
                     po context/portal_url/getPortalObject | nothing;
                     intra python:po.get('intranet', None);
                     has_support python:intra and member_id in intra.keys() ;"
-                    tal:attributes="class python:selected_tab=='intranet' and 'selected' or 'plain'"
+                    tal:attributes="class python:selected_tab=='intranet' and 'dropdown selected' or 'dropdown  plain'"
                     >
 
-              <a tal:attributes="href string:${portal_url}/intranet" tal:condition="is_anonymous">SUPPORT</a>
-              <a tal:attributes="href string:${portal_url}/intranet/${member_id}" tal:condition="python: not(is_anonymous) and has_support">SUPPORT</a>
-              <a tal:attributes="href string:${portal_url}/support" tal:condition="python: not(is_anonymous) and not(has_support)">SUPPORT</a>
+              <a class="plain" tal:attributes="href string:${portal_url}/intranet" tal:condition="is_anonymous">SUPPORT</a>
+              <a class="plain" tal:attributes="href string:${portal_url}/intranet/${member_id}" tal:condition="python: not(is_anonymous) and has_support">SUPPORT</a>
+              <a class="plain" tal:attributes="href string:${portal_url}/support" tal:condition="python: not(is_anonymous) and not(has_support)">SUPPORT</a>
             </li>
             </ul>
 

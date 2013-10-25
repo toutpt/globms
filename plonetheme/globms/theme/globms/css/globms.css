@@ -2286,9 +2286,12 @@ ul.navigation li.selected a,
 ul.navigation li.active a {
   color: #75ad0a;
 }
-#portaltab-community a,
-#portaltab-community a,
+
 #portaltab-community a{
+  /* border-right:none;*/
+}
+
+#portaltab-support a{
   border-right:none;
 }
 
