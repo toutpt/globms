@@ -2559,3 +2559,9 @@ input.searchButton{
   width: 50%;
   float: left;
 }
+
+#portal-globalnav {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 13px; 
+}

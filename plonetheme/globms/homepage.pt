@@ -16,7 +16,7 @@
   </div>
   <div class="grid_2 omega">
     <div class="contact">
-      <h3><a tal:attributes="href string:${context/absolute_url}/contact-us">Contact us</a></h3>
+      <h3><a tal:attributes="href string:${context/absolute_url}/contact-info">Contact us</a></h3>
     </div>
     <div class="support"
          tal:define="member context/@@plone_portal_state/member;
