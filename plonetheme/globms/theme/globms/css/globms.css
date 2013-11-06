@@ -115,7 +115,10 @@ q {
     margin: 0;
 }
 #portal-globalnav li {
+	width: 158px;
+	text-align: center;
 }
+
 #portal-globalnav li a {
     display: inline-block;
 /*     padding: 0.5em 1em 2em 1em; */
